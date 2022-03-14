@@ -1,0 +1,1 @@
+select * from `bigquery-public-data.hacker_news.stories` order by score desc limit 100
