@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: news_by_favorite_authors
+    description: all the news for my favorite authors
+    columns:
+      - name: written_by
+        description: primary key - author
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['replicatorblog', 'ethomson']
+          - relationships:
+              to: ref('favorite_authors')
+              field: written_by
+      - name: score
+        description: the score of the article
+        tests:
+          - not_null
+      - name: time_ts
+        description: timestamp of the article publication
+        tests:
+          - not_null
+
