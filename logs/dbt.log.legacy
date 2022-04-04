@@ -1,0 +1,1947 @@
+2022-03-24 20:56:36.996712 (MainThread): Running with dbt=1.0.4
+2022-03-24 20:56:37.166423 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt_rpc.task.server.RPCServerTask'>, debug=None, defer=None, exclude=None, fail_fast=None, host='0.0.0.0', log_cache_events=False, log_format=None, models=None, partial_parse=True, port=8580, printer_width=None, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='rpc', write_json=None)
+2022-03-24 20:56:37.188726 (Thread-12): 20:56:37  Partial parse save file not found. Starting full parse.
+2022-03-24 20:56:37.189083 (Thread-12): 20:56:37  Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d40f40c70>]}
+2022-03-24 20:56:37.192842 (MainThread): Tracking: tracking
+2022-03-24 20:56:37.203183 (MainThread): 20:56:37  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d40f40cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d40f46550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d40f464f0>]}
+2022-03-24 20:56:37.203510 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=21
+2022-03-24 20:56:37.203800 (MainThread): Supported methods: ['build', 'cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'list', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'source-freshness', 'status', 'test']
+2022-03-24 20:56:37.204006 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2022-03-24 20:56:37.222118 (Thread-12): 20:56:37  Parsing macros/adapters.sql
+2022-03-24 20:56:37.246275 (Thread-12): 20:56:37  Parsing macros/etc.sql
+2022-03-24 20:56:37.248192 (Thread-12): 20:56:37  Parsing macros/catalog.sql
+2022-03-24 20:56:37.254267 (Thread-12): 20:56:37  Parsing macros/materializations/table.sql
+2022-03-24 20:56:37.258119 (Thread-12): 20:56:37  Parsing macros/materializations/seed.sql
+2022-03-24 20:56:37.260728 (Thread-12): 20:56:37  Parsing macros/materializations/incremental.sql
+2022-03-24 20:56:37.276264 (Thread-12): 20:56:37  Parsing macros/materializations/copy.sql
+2022-03-24 20:56:37.278911 (Thread-12): 20:56:37  Parsing macros/materializations/snapshot.sql
+2022-03-24 20:56:37.280612 (Thread-12): 20:56:37  Parsing macros/materializations/view.sql
+2022-03-24 20:56:37.283120 (Thread-12): 20:56:37  Parsing macros/adapters/metadata.sql
+2022-03-24 20:56:37.290675 (Thread-12): 20:56:37  Parsing macros/adapters/columns.sql
+2022-03-24 20:56:37.300567 (Thread-12): 20:56:37  Parsing macros/adapters/freshness.sql
+2022-03-24 20:56:37.303530 (Thread-12): 20:56:37  Parsing macros/adapters/persist_docs.sql
+2022-03-24 20:56:37.308004 (Thread-12): 20:56:37  Parsing macros/adapters/relation.sql
+2022-03-24 20:56:37.317524 (Thread-12): 20:56:37  Parsing macros/adapters/schema.sql
+2022-03-24 20:56:37.319776 (Thread-12): 20:56:37  Parsing macros/adapters/indexes.sql
+2022-03-24 20:56:37.322498 (Thread-12): 20:56:37  Parsing macros/get_custom_name/get_custom_schema.sql
+2022-03-24 20:56:37.324942 (Thread-12): 20:56:37  Parsing macros/get_custom_name/get_custom_alias.sql
+2022-03-24 20:56:37.326413 (Thread-12): 20:56:37  Parsing macros/get_custom_name/get_custom_database.sql
+2022-03-24 20:56:37.327944 (Thread-12): 20:56:37  Parsing macros/etc/datetime.sql
+2022-03-24 20:56:37.336360 (Thread-12): 20:56:37  Parsing macros/etc/statement.sql
+2022-03-24 20:56:37.340738 (Thread-12): 20:56:37  Parsing macros/generic_test_sql/unique.sql
+2022-03-24 20:56:37.341472 (Thread-12): 20:56:37  Parsing macros/generic_test_sql/not_null.sql
+2022-03-24 20:56:37.342015 (Thread-12): 20:56:37  Parsing macros/generic_test_sql/accepted_values.sql
+2022-03-24 20:56:37.343377 (Thread-12): 20:56:37  Parsing macros/generic_test_sql/relationships.sql
+2022-03-24 20:56:37.344227 (Thread-12): 20:56:37  Parsing macros/materializations/configs.sql
+2022-03-24 20:56:37.346517 (Thread-12): 20:56:37  Parsing macros/materializations/hooks.sql
+2022-03-24 20:56:37.350572 (Thread-12): 20:56:37  Parsing macros/materializations/models/table/table.sql
+2022-03-24 20:56:37.357959 (Thread-12): 20:56:37  Parsing macros/materializations/models/table/create_table_as.sql
+2022-03-24 20:56:37.360859 (Thread-12): 20:56:37  Parsing macros/materializations/models/view/create_or_replace_view.sql
+2022-03-24 20:56:37.363521 (Thread-12): 20:56:37  Parsing macros/materializations/models/view/helpers.sql
+2022-03-24 20:56:37.364872 (Thread-12): 20:56:37  Parsing macros/materializations/models/view/create_view_as.sql
+2022-03-24 20:56:37.367133 (Thread-12): 20:56:37  Parsing macros/materializations/models/view/view.sql
+2022-03-24 20:56:37.374131 (Thread-12): 20:56:37  Parsing macros/materializations/models/incremental/incremental.sql
+2022-03-24 20:56:37.384195 (Thread-12): 20:56:37  Parsing macros/materializations/models/incremental/on_schema_change.sql
+2022-03-24 20:56:37.399869 (Thread-12): 20:56:37  Parsing macros/materializations/models/incremental/is_incremental.sql
+2022-03-24 20:56:37.401664 (Thread-12): 20:56:37  Parsing macros/materializations/models/incremental/merge.sql
+2022-03-24 20:56:37.413625 (Thread-12): 20:56:37  Parsing macros/materializations/models/incremental/column_helpers.sql
+2022-03-24 20:56:37.418082 (Thread-12): 20:56:37  Parsing macros/materializations/seeds/helpers.sql
+2022-03-24 20:56:37.434406 (Thread-12): 20:56:37  Parsing macros/materializations/seeds/seed.sql
+2022-03-24 20:56:37.440462 (Thread-12): 20:56:37  Parsing macros/materializations/tests/helpers.sql
+2022-03-24 20:56:37.442326 (Thread-12): 20:56:37  Parsing macros/materializations/tests/test.sql
+2022-03-24 20:56:37.446711 (Thread-12): 20:56:37  Parsing macros/materializations/tests/where_subquery.sql
+2022-03-24 20:56:37.448576 (Thread-12): 20:56:37  Parsing macros/materializations/snapshots/helpers.sql
+2022-03-24 20:56:37.459928 (Thread-12): 20:56:37  Parsing macros/materializations/snapshots/strategies.sql
+2022-03-24 20:56:37.476886 (Thread-12): 20:56:37  Parsing macros/materializations/snapshots/snapshot_merge.sql
+2022-03-24 20:56:37.478596 (Thread-12): 20:56:37  Parsing macros/materializations/snapshots/snapshot.sql
+2022-03-24 20:56:37.490253 (Thread-12): 20:56:37  Parsing tests/generic/builtin.sql
+2022-03-24 20:56:37.690854 (Thread-12): 20:56:37  1699: static parser successfully parsed example/my_second_dbt_model.sql
+2022-03-24 20:56:37.704000 (Thread-12): 20:56:37  1699: static parser successfully parsed example/my_first_dbt_model.sql
+2022-03-24 20:56:37.786264 (Thread-12): 20:56:37  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d40042370>]}
+2022-03-24 20:56:38.237950 (Thread-13): handling status request
+2022-03-24 20:56:38.238290 (Thread-13): 20:56:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d40042160>]}
+2022-03-24 20:56:38.239281 (Thread-13): sending response (<Response 15763 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:56:38.245640 (Thread-14): handling list request
+2022-03-24 20:56:38.245954 (Thread-14): 20:56:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d40042460>]}
+2022-03-24 20:56:38.278659 (Thread-14): 20:56:38  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d417a2430>]}
+2022-03-24 20:56:38.279421 (Thread-14): 20:56:38  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:56:38.283365 (Thread-14): 20:56:38  The selection criterion '+1648155360754/__unsaved/Statement' does not match any nodes
+2022-03-24 20:56:38.283722 (Thread-14): 20:56:38  The selection criterion '1.sql+' does not match any nodes
+2022-03-24 20:56:38.283919 (Thread-14): 20:56:38  No nodes selected!
+2022-03-24 20:56:38.285823 (Thread-14): sending response (<Response 2348 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:56:38.288499 (Thread-15): handling status request
+2022-03-24 20:56:38.288761 (Thread-15): 20:56:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d406ad2e0>]}
+2022-03-24 20:56:38.289591 (Thread-15): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:56:38.298405 (Thread-16): handling status request
+2022-03-24 20:56:38.298697 (Thread-16): 20:56:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d406ad640>]}
+2022-03-24 20:56:38.299506 (Thread-16): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:56:55.932154 (Thread-17): handling status request
+2022-03-24 20:56:55.934274 (Thread-17): 20:56:55  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d406ad7c0>]}
+2022-03-24 20:56:55.935203 (Thread-17): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:56:56.157452 (Thread-18): handling cli_args request
+2022-03-24 20:56:56.157778 (Thread-18): 20:56:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d406adcd0>]}
+2022-03-24 20:56:56.162205 (Thread-19): handling status request
+2022-03-24 20:56:56.162709 (Thread-19): 20:56:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d406ad370>]}
+2022-03-24 20:56:56.163601 (Thread-19): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:56:58.530405 (Thread-18): sending response (<Response 138 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:56:58.616977 (MainThread): 20:56:58  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-24 20:56:58.617431 (MainThread): 20:56:58  Partial parsing enabled, no changes found, skipping parsing
+2022-03-24 20:56:58.623786 (MainThread): 20:56:58  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6519dd7e-f709-45d5-b65a-239763765af9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20b4327760>]}
+2022-03-24 20:56:58.651118 (MainThread): 20:56:58  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6519dd7e-f709-45d5-b65a-239763765af9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20b43b3d30>]}
+2022-03-24 20:56:58.651452 (MainThread): 20:56:58  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:56:58.652763 (MainThread): 20:56:58  
+2022-03-24 20:56:58.653118 (MainThread): 20:56:58  Acquiring new bigquery connection "master"
+2022-03-24 20:56:58.654106 (ThreadPoolExecutor-1_0): 20:56:58  Acquiring new bigquery connection "list_whejna-vmo2-composer-env_dbt_whejna"
+2022-03-24 20:56:58.654244 (ThreadPoolExecutor-1_0): 20:56:58  Opening a new connection, currently in state init
+2022-03-24 20:56:58.754646 (Thread-20): handling poll request
+2022-03-24 20:56:58.755068 (Thread-20): 20:56:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d4003a070>]}
+2022-03-24 20:56:58.755944 (Thread-20): sending response (<Response 3362 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:56:58.891701 (MainThread): 20:56:58  Concurrency: 4 threads (target='default')
+2022-03-24 20:56:58.891897 (MainThread): 20:56:58  
+2022-03-24 20:56:58.895165 (Thread-1): 20:56:58  Began running node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:56:58.895378 (Thread-1): 20:56:58  1 of 4 START test not_null_my_first_dbt_model_id................................ [RUN]
+2022-03-24 20:56:58.895689 (Thread-1): 20:56:58  Acquiring new bigquery connection "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:56:58.895792 (Thread-1): 20:56:58  Began compiling node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:56:58.895887 (Thread-1): 20:56:58  Compiling test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:56:58.900472 (Thread-2): 20:56:58  Began running node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:56:58.900667 (Thread-2): 20:56:58  2 of 4 START test not_null_my_second_dbt_model_id............................... [RUN]
+2022-03-24 20:56:58.900972 (Thread-2): 20:56:58  Acquiring new bigquery connection "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:56:58.901063 (Thread-2): 20:56:58  Began compiling node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:56:58.901150 (Thread-2): 20:56:58  Compiling test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:56:58.905534 (Thread-3): 20:56:58  Began running node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:56:58.905725 (Thread-3): 20:56:58  3 of 4 START test unique_my_first_dbt_model_id.................................. [RUN]
+2022-03-24 20:56:58.906018 (Thread-3): 20:56:58  Acquiring new bigquery connection "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:56:58.906110 (Thread-3): 20:56:58  Began compiling node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:56:58.906199 (Thread-3): 20:56:58  Compiling test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:56:58.915714 (Thread-4): 20:56:58  Began running node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:56:58.915933 (Thread-4): 20:56:58  4 of 4 START test unique_my_second_dbt_model_id................................. [RUN]
+2022-03-24 20:56:58.916238 (Thread-4): 20:56:58  Acquiring new bigquery connection "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:56:58.916430 (Thread-4): 20:56:58  Began compiling node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:56:58.916536 (Thread-4): 20:56:58  Compiling test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:56:58.921283 (Thread-2): 20:56:58  Writing injected SQL for node "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:56:58.922779 (Thread-1): 20:56:58  Writing injected SQL for node "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:56:58.927588 (Thread-3): 20:56:58  Writing injected SQL for node "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:56:58.929080 (Thread-4): 20:56:58  Writing injected SQL for node "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:56:58.965455 (Thread-2): 20:56:58  finished collecting timing info
+2022-03-24 20:56:58.965673 (Thread-2): 20:56:58  Began executing node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:56:58.970872 (Thread-3): 20:56:58  finished collecting timing info
+2022-03-24 20:56:58.971080 (Thread-3): 20:56:58  Began executing node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:56:58.999007 (Thread-3): 20:56:58  Writing runtime SQL for node "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:56:58.999360 (Thread-4): 20:56:58  finished collecting timing info
+2022-03-24 20:56:58.999588 (Thread-4): 20:56:58  Began executing node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:56:59.001462 (Thread-4): 20:56:59  Writing runtime SQL for node "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:56:59.002115 (Thread-2): 20:56:59  Writing runtime SQL for node "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:56:59.010681 (Thread-1): 20:56:59  finished collecting timing info
+2022-03-24 20:56:59.010907 (Thread-1): 20:56:59  Began executing node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:56:59.012806 (Thread-1): 20:56:59  Writing runtime SQL for node "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:56:59.043898 (Thread-4): 20:56:59  Opening a new connection, currently in state init
+2022-03-24 20:56:59.047657 (Thread-2): 20:56:59  Opening a new connection, currently in state init
+2022-03-24 20:56:59.048984 (Thread-4): 20:56:59  On test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:56:59.052436 (Thread-2): 20:56:59  On test.my_new_project.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:56:59.053768 (Thread-3): 20:56:59  Opening a new connection, currently in state init
+2022-03-24 20:56:59.055849 (Thread-1): 20:56:59  Opening a new connection, currently in state closed
+2022-03-24 20:56:59.058367 (Thread-3): 20:56:59  On test.my_new_project.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:56:59.060778 (Thread-1): 20:56:59  On test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:56:59.343149 (Thread-2): 20:56:59  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:56:59.343335 (Thread-2): 20:56:59  BigQuery adapter: 404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+
+Location: US
+Job ID: 8721f867-39c4-4ec3-bb64-a8a214e6d35f
+
+2022-03-24 20:56:59.343497 (Thread-2): 20:56:59  finished collecting timing info
+2022-03-24 20:56:59.343851 (Thread-2): 20:56:59  Runtime Error in test not_null_my_second_dbt_model_id (models/example/schema.yml)
+  404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+  
+  Location: US
+  Job ID: 8721f867-39c4-4ec3-bb64-a8a214e6d35f
+  
+2022-03-24 20:56:59.344021 (Thread-2): 20:56:59  2 of 4 ERROR not_null_my_second_dbt_model_id.................................... [ERROR in 0.44s]
+2022-03-24 20:56:59.344123 (Thread-2): 20:56:59  Finished running node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:56:59.351569 (Thread-4): 20:56:59  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:56:59.351727 (Thread-4): 20:56:59  BigQuery adapter: 404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+
+Location: US
+Job ID: a373ffca-d2b3-4dba-9374-d6591adfe44a
+
+2022-03-24 20:56:59.351920 (Thread-4): 20:56:59  finished collecting timing info
+2022-03-24 20:56:59.352327 (Thread-4): 20:56:59  Runtime Error in test unique_my_second_dbt_model_id (models/example/schema.yml)
+  404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+  
+  Location: US
+  Job ID: a373ffca-d2b3-4dba-9374-d6591adfe44a
+  
+2022-03-24 20:56:59.352500 (Thread-4): 20:56:59  4 of 4 ERROR unique_my_second_dbt_model_id...................................... [ERROR in 0.44s]
+2022-03-24 20:56:59.352601 (Thread-4): 20:56:59  Finished running node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:56:59.358012 (Thread-1): 20:56:59  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:56:59.358186 (Thread-1): 20:56:59  BigQuery adapter: 404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+
+Location: US
+Job ID: 1207100e-24cf-4c4f-a894-1f72876225f0
+
+2022-03-24 20:56:59.358451 (Thread-1): 20:56:59  finished collecting timing info
+2022-03-24 20:56:59.358810 (Thread-1): 20:56:59  Runtime Error in test not_null_my_first_dbt_model_id (models/example/schema.yml)
+  404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+  
+  Location: US
+  Job ID: 1207100e-24cf-4c4f-a894-1f72876225f0
+  
+2022-03-24 20:56:59.358966 (Thread-1): 20:56:59  1 of 4 ERROR not_null_my_first_dbt_model_id..................................... [ERROR in 0.46s]
+2022-03-24 20:56:59.359064 (Thread-1): 20:56:59  Finished running node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:56:59.486779 (Thread-3): 20:56:59  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:56:59.486956 (Thread-3): 20:56:59  BigQuery adapter: 404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+
+Location: US
+Job ID: 3773d0b1-b14f-41c4-88c9-2e9175f036c5
+
+2022-03-24 20:56:59.487111 (Thread-3): 20:56:59  finished collecting timing info
+2022-03-24 20:56:59.487446 (Thread-3): 20:56:59  Runtime Error in test unique_my_first_dbt_model_id (models/example/schema.yml)
+  404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+  
+  Location: US
+  Job ID: 3773d0b1-b14f-41c4-88c9-2e9175f036c5
+  
+2022-03-24 20:56:59.487601 (Thread-3): 20:56:59  3 of 4 ERROR unique_my_first_dbt_model_id....................................... [ERROR in 0.58s]
+2022-03-24 20:56:59.487699 (Thread-3): 20:56:59  Finished running node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:56:59.489499 (MainThread): 20:56:59  Acquiring new bigquery connection "master"
+2022-03-24 20:56:59.489818 (MainThread): 20:56:59  
+2022-03-24 20:56:59.489915 (MainThread): 20:56:59  Finished running 4 tests in 0.84s.
+2022-03-24 20:56:59.489996 (MainThread): 20:56:59  Connection 'master' was properly closed.
+2022-03-24 20:56:59.490066 (MainThread): 20:56:59  Connection 'test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710' was properly closed.
+2022-03-24 20:56:59.490129 (MainThread): 20:56:59  Connection 'test.my_new_project.not_null_my_second_dbt_model_id.151b76d778' was properly closed.
+2022-03-24 20:56:59.490191 (MainThread): 20:56:59  Connection 'test.my_new_project.unique_my_first_dbt_model_id.16e066b321' was properly closed.
+2022-03-24 20:56:59.490252 (MainThread): 20:56:59  Connection 'test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+2022-03-24 20:56:59.538717 (MainThread): 20:56:59  
+2022-03-24 20:56:59.538951 (MainThread): 20:56:59  Completed with 4 errors and 0 warnings:
+2022-03-24 20:56:59.539042 (MainThread): 20:56:59  
+2022-03-24 20:56:59.539133 (MainThread): 20:56:59  Runtime Error in test not_null_my_second_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:56:59.539211 (MainThread): 20:56:59    404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+2022-03-24 20:56:59.539278 (MainThread): 20:56:59    
+2022-03-24 20:56:59.539343 (MainThread): 20:56:59    Location: US
+2022-03-24 20:56:59.539407 (MainThread): 20:56:59    Job ID: 8721f867-39c4-4ec3-bb64-a8a214e6d35f
+2022-03-24 20:56:59.539470 (MainThread): 20:56:59    
+2022-03-24 20:56:59.539536 (MainThread): 20:56:59  
+2022-03-24 20:56:59.539609 (MainThread): 20:56:59  Runtime Error in test unique_my_second_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:56:59.539676 (MainThread): 20:56:59    404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+2022-03-24 20:56:59.539736 (MainThread): 20:56:59    
+2022-03-24 20:56:59.539796 (MainThread): 20:56:59    Location: US
+2022-03-24 20:56:59.539856 (MainThread): 20:56:59    Job ID: a373ffca-d2b3-4dba-9374-d6591adfe44a
+2022-03-24 20:56:59.539917 (MainThread): 20:56:59    
+2022-03-24 20:56:59.539981 (MainThread): 20:56:59  
+2022-03-24 20:56:59.540053 (MainThread): 20:56:59  Runtime Error in test not_null_my_first_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:56:59.540119 (MainThread): 20:56:59    404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+2022-03-24 20:56:59.540179 (MainThread): 20:56:59    
+2022-03-24 20:56:59.540241 (MainThread): 20:56:59    Location: US
+2022-03-24 20:56:59.540336 (MainThread): 20:56:59    Job ID: 1207100e-24cf-4c4f-a894-1f72876225f0
+2022-03-24 20:56:59.540401 (MainThread): 20:56:59    
+2022-03-24 20:56:59.540468 (MainThread): 20:56:59  
+2022-03-24 20:56:59.540542 (MainThread): 20:56:59  Runtime Error in test unique_my_first_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:56:59.540607 (MainThread): 20:56:59    404 Not found: Dataset whejna-vmo2-composer-env:dbt_whejna was not found in location US
+2022-03-24 20:56:59.540669 (MainThread): 20:56:59    
+2022-03-24 20:56:59.540729 (MainThread): 20:56:59    Location: US
+2022-03-24 20:56:59.540789 (MainThread): 20:56:59    Job ID: 3773d0b1-b14f-41c4-88c9-2e9175f036c5
+2022-03-24 20:56:59.540848 (MainThread): 20:56:59    
+2022-03-24 20:56:59.540919 (MainThread): 20:56:59  
+2022-03-24 20:56:59.540996 (MainThread): 20:56:59  Done. PASS=0 WARN=0 ERROR=4 SKIP=0 TOTAL=4
+2022-03-24 20:56:59.975098 (Thread-21): handling poll request
+2022-03-24 20:56:59.975427 (Thread-21): 20:56:59  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d225870d0>]}
+2022-03-24 20:56:59.977711 (Thread-21): sending response (<Response 63436 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:00.540989 (Thread-22): handling status request
+2022-03-24 20:57:00.541355 (Thread-22): 20:57:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d22587280>]}
+2022-03-24 20:57:00.542298 (Thread-22): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:00.597637 (Thread-23): handling status request
+2022-03-24 20:57:00.597981 (Thread-23): 20:57:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d22587640>]}
+2022-03-24 20:57:00.598832 (Thread-23): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:00.673488 (Thread-24): handling status request
+2022-03-24 20:57:00.673874 (Thread-24): 20:57:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d4003afd0>]}
+2022-03-24 20:57:00.674706 (Thread-24): sending response (<Response 15763 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:00.682784 (Thread-25): handling list request
+2022-03-24 20:57:00.683110 (Thread-25): 20:57:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d22587b20>]}
+2022-03-24 20:57:00.714810 (Thread-25): 20:57:00  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2258a490>]}
+2022-03-24 20:57:00.715200 (Thread-25): 20:57:00  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:57:00.716256 (Thread-25): 20:57:00  The selection criterion '+1648155360754/__unsaved/Statement' does not match any nodes
+2022-03-24 20:57:00.716490 (Thread-25): 20:57:00  The selection criterion '1.sql+' does not match any nodes
+2022-03-24 20:57:00.716592 (Thread-25): 20:57:00  No nodes selected!
+2022-03-24 20:57:00.718209 (Thread-25): sending response (<Response 2348 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:15.478457 (Thread-26): handling status request
+2022-03-24 20:57:15.480236 (Thread-26): 20:57:15  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d225923d0>]}
+2022-03-24 20:57:15.481110 (Thread-26): sending response (<Response 15763 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:15.489042 (Thread-27): handling list request
+2022-03-24 20:57:15.489378 (Thread-27): 20:57:15  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d225924f0>]}
+2022-03-24 20:57:15.516948 (Thread-27): 20:57:15  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2258a6d0>]}
+2022-03-24 20:57:15.517498 (Thread-27): 20:57:15  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:57:15.518381 (Thread-27): 20:57:15  The selection criterion '+1648155360754/__unsaved/Statement' does not match any nodes
+2022-03-24 20:57:15.518579 (Thread-27): 20:57:15  The selection criterion '1.sql+' does not match any nodes
+2022-03-24 20:57:15.518671 (Thread-27): 20:57:15  No nodes selected!
+2022-03-24 20:57:15.520340 (Thread-27): sending response (<Response 2348 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:50.482803 (Thread-28): handling status request
+2022-03-24 20:57:50.484756 (Thread-28): 20:57:50  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d406e5640>]}
+2022-03-24 20:57:50.485735 (Thread-28): sending response (<Response 15763 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:50.499147 (Thread-29): handling list request
+2022-03-24 20:57:50.499532 (Thread-29): 20:57:50  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2258adc0>]}
+2022-03-24 20:57:50.526714 (Thread-29): 20:57:50  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d4068f4f0>]}
+2022-03-24 20:57:50.527094 (Thread-29): 20:57:50  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:57:50.529763 (Thread-29): 20:57:50  The selection criterion '+1648155360754/__unsaved/Statement' does not match any nodes
+2022-03-24 20:57:50.530042 (Thread-29): 20:57:50  The selection criterion '1.sql+' does not match any nodes
+2022-03-24 20:57:50.530299 (Thread-29): 20:57:50  No nodes selected!
+2022-03-24 20:57:50.532389 (Thread-29): sending response (<Response 2348 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:55.529660 (Thread-30): handling status request
+2022-03-24 20:57:55.530052 (Thread-30): 20:57:55  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d40725190>]}
+2022-03-24 20:57:55.531330 (Thread-30): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:55.778197 (Thread-31): handling status request
+2022-03-24 20:57:55.778565 (Thread-31): 20:57:55  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d406bd8b0>]}
+2022-03-24 20:57:55.779534 (Thread-31): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:55.787396 (Thread-32): handling cli_args request
+2022-03-24 20:57:55.787755 (Thread-32): 20:57:55  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d4003ac10>]}
+2022-03-24 20:57:58.313922 (Thread-32): sending response (<Response 138 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:58.410269 (MainThread): 20:57:58  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-24 20:57:58.410815 (MainThread): 20:57:58  Partial parsing enabled, no changes found, skipping parsing
+2022-03-24 20:57:58.417940 (MainThread): 20:57:58  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ceeeb151-190d-406b-9485-b1aaec02fedb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ed00b9640>]}
+2022-03-24 20:57:58.447202 (MainThread): 20:57:58  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ceeeb151-190d-406b-9485-b1aaec02fedb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ed0099fd0>]}
+2022-03-24 20:57:58.447580 (MainThread): 20:57:58  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:57:58.449104 (MainThread): 20:57:58  
+2022-03-24 20:57:58.449557 (MainThread): 20:57:58  Acquiring new bigquery connection "master"
+2022-03-24 20:57:58.450658 (ThreadPoolExecutor-1_0): 20:57:58  Acquiring new bigquery connection "list_whejna-vmo2-composer-env_dbt_whejna"
+2022-03-24 20:57:58.450811 (ThreadPoolExecutor-1_0): 20:57:58  Opening a new connection, currently in state init
+2022-03-24 20:57:58.561084 (Thread-33): handling poll request
+2022-03-24 20:57:58.561499 (Thread-33): 20:57:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d225ac220>]}
+2022-03-24 20:57:58.562366 (Thread-33): sending response (<Response 3362 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:57:58.710581 (MainThread): 20:57:58  Concurrency: 4 threads (target='default')
+2022-03-24 20:57:58.710775 (MainThread): 20:57:58  
+2022-03-24 20:57:58.714705 (Thread-1): 20:57:58  Began running node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:57:58.714934 (Thread-1): 20:57:58  1 of 4 START test not_null_my_first_dbt_model_id................................ [RUN]
+2022-03-24 20:57:58.715276 (Thread-1): 20:57:58  Acquiring new bigquery connection "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:57:58.715381 (Thread-1): 20:57:58  Began compiling node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:57:58.715489 (Thread-1): 20:57:58  Compiling test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:57:58.726921 (Thread-1): 20:57:58  Writing injected SQL for node "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:57:58.727288 (Thread-3): 20:57:58  Began running node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:57:58.727476 (Thread-3): 20:57:58  2 of 4 START test not_null_my_second_dbt_model_id............................... [RUN]
+2022-03-24 20:57:58.727789 (Thread-3): 20:57:58  Acquiring new bigquery connection "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:57:58.727888 (Thread-3): 20:57:58  Began compiling node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:57:58.727978 (Thread-3): 20:57:58  Compiling test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:57:58.731619 (Thread-3): 20:57:58  Writing injected SQL for node "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:57:58.731991 (Thread-4): 20:57:58  Began running node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:57:58.732222 (Thread-4): 20:57:58  3 of 4 START test unique_my_first_dbt_model_id.................................. [RUN]
+2022-03-24 20:57:58.732569 (Thread-4): 20:57:58  Acquiring new bigquery connection "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:57:58.732669 (Thread-4): 20:57:58  Began compiling node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:57:58.732774 (Thread-4): 20:57:58  Compiling test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:57:58.737095 (Thread-2): 20:57:58  Began running node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:57:58.737361 (Thread-2): 20:57:58  4 of 4 START test unique_my_second_dbt_model_id................................. [RUN]
+2022-03-24 20:57:58.737981 (Thread-2): 20:57:58  Acquiring new bigquery connection "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:57:58.738119 (Thread-2): 20:57:58  Began compiling node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:57:58.738246 (Thread-2): 20:57:58  Compiling test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:57:58.744777 (Thread-4): 20:57:58  Writing injected SQL for node "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:57:58.747054 (Thread-2): 20:57:58  Writing injected SQL for node "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:57:58.760634 (Thread-1): 20:57:58  finished collecting timing info
+2022-03-24 20:57:58.760912 (Thread-1): 20:57:58  Began executing node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:57:58.766117 (Thread-4): 20:57:58  finished collecting timing info
+2022-03-24 20:57:58.766398 (Thread-4): 20:57:58  Began executing node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:57:58.776907 (Thread-3): 20:57:58  finished collecting timing info
+2022-03-24 20:57:58.777152 (Thread-3): 20:57:58  Began executing node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:57:58.787098 (Thread-2): 20:57:58  finished collecting timing info
+2022-03-24 20:57:58.787322 (Thread-2): 20:57:58  Began executing node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:57:58.812007 (Thread-4): 20:57:58  Writing runtime SQL for node "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:57:58.812877 (Thread-3): 20:57:58  Writing runtime SQL for node "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:57:58.814270 (Thread-1): 20:57:58  Writing runtime SQL for node "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:57:58.815459 (Thread-2): 20:57:58  Writing runtime SQL for node "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:57:58.832538 (Thread-4): 20:57:58  Opening a new connection, currently in state init
+2022-03-24 20:57:58.832984 (Thread-1): 20:57:58  Opening a new connection, currently in state closed
+2022-03-24 20:57:58.833291 (Thread-3): 20:57:58  Opening a new connection, currently in state init
+2022-03-24 20:57:58.833814 (Thread-2): 20:57:58  Opening a new connection, currently in state init
+2022-03-24 20:57:58.838267 (Thread-4): 20:57:58  On test.my_new_project.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:57:58.839394 (Thread-1): 20:57:58  On test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:57:58.840700 (Thread-2): 20:57:58  On test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:57:58.841983 (Thread-3): 20:57:58  On test.my_new_project.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:57:59.157740 (Thread-2): 20:57:59  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:57:59.157939 (Thread-2): 20:57:59  BigQuery adapter: 404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+
+Location: EU
+Job ID: aea7c5a8-83bc-4ebb-ac48-d5164d8e71f4
+
+2022-03-24 20:57:59.158115 (Thread-2): 20:57:59  finished collecting timing info
+2022-03-24 20:57:59.158497 (Thread-2): 20:57:59  Runtime Error in test unique_my_second_dbt_model_id (models/example/schema.yml)
+  404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+  
+  Location: EU
+  Job ID: aea7c5a8-83bc-4ebb-ac48-d5164d8e71f4
+  
+2022-03-24 20:57:59.158670 (Thread-2): 20:57:59  4 of 4 ERROR unique_my_second_dbt_model_id...................................... [ERROR in 0.42s]
+2022-03-24 20:57:59.158777 (Thread-2): 20:57:59  Finished running node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:57:59.168777 (Thread-4): 20:57:59  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:57:59.168959 (Thread-4): 20:57:59  BigQuery adapter: 404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+
+Location: EU
+Job ID: 494f935e-a25a-4053-a203-9d016e91fc53
+
+2022-03-24 20:57:59.169127 (Thread-4): 20:57:59  finished collecting timing info
+2022-03-24 20:57:59.169524 (Thread-4): 20:57:59  Runtime Error in test unique_my_first_dbt_model_id (models/example/schema.yml)
+  404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+  
+  Location: EU
+  Job ID: 494f935e-a25a-4053-a203-9d016e91fc53
+  
+2022-03-24 20:57:59.169707 (Thread-4): 20:57:59  3 of 4 ERROR unique_my_first_dbt_model_id....................................... [ERROR in 0.44s]
+2022-03-24 20:57:59.169818 (Thread-4): 20:57:59  Finished running node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:57:59.195160 (Thread-1): 20:57:59  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:57:59.195580 (Thread-1): 20:57:59  BigQuery adapter: 404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+
+Location: EU
+Job ID: c4e0d87f-ecac-44b0-b099-1a4b2370b46e
+
+2022-03-24 20:57:59.195795 (Thread-1): 20:57:59  finished collecting timing info
+2022-03-24 20:57:59.196172 (Thread-1): 20:57:59  Runtime Error in test not_null_my_first_dbt_model_id (models/example/schema.yml)
+  404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+  
+  Location: EU
+  Job ID: c4e0d87f-ecac-44b0-b099-1a4b2370b46e
+  
+2022-03-24 20:57:59.196395 (Thread-1): 20:57:59  1 of 4 ERROR not_null_my_first_dbt_model_id..................................... [ERROR in 0.48s]
+2022-03-24 20:57:59.196507 (Thread-1): 20:57:59  Finished running node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:57:59.229577 (Thread-3): 20:57:59  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:57:59.229764 (Thread-3): 20:57:59  BigQuery adapter: 404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+
+Location: EU
+Job ID: 67b2c7f1-8361-4d29-9468-f6eb9f74edaa
+
+2022-03-24 20:57:59.229935 (Thread-3): 20:57:59  finished collecting timing info
+2022-03-24 20:57:59.230404 (Thread-3): 20:57:59  Runtime Error in test not_null_my_second_dbt_model_id (models/example/schema.yml)
+  404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+  
+  Location: EU
+  Job ID: 67b2c7f1-8361-4d29-9468-f6eb9f74edaa
+  
+2022-03-24 20:57:59.230616 (Thread-3): 20:57:59  2 of 4 ERROR not_null_my_second_dbt_model_id.................................... [ERROR in 0.50s]
+2022-03-24 20:57:59.230725 (Thread-3): 20:57:59  Finished running node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:57:59.233086 (MainThread): 20:57:59  Acquiring new bigquery connection "master"
+2022-03-24 20:57:59.233466 (MainThread): 20:57:59  
+2022-03-24 20:57:59.233567 (MainThread): 20:57:59  Finished running 4 tests in 0.78s.
+2022-03-24 20:57:59.233667 (MainThread): 20:57:59  Connection 'master' was properly closed.
+2022-03-24 20:57:59.233773 (MainThread): 20:57:59  Connection 'test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710' was properly closed.
+2022-03-24 20:57:59.233860 (MainThread): 20:57:59  Connection 'test.my_new_project.not_null_my_second_dbt_model_id.151b76d778' was properly closed.
+2022-03-24 20:57:59.233928 (MainThread): 20:57:59  Connection 'test.my_new_project.unique_my_first_dbt_model_id.16e066b321' was properly closed.
+2022-03-24 20:57:59.233995 (MainThread): 20:57:59  Connection 'test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+2022-03-24 20:57:59.288367 (MainThread): 20:57:59  
+2022-03-24 20:57:59.288622 (MainThread): 20:57:59  Completed with 4 errors and 0 warnings:
+2022-03-24 20:57:59.288717 (MainThread): 20:57:59  
+2022-03-24 20:57:59.288810 (MainThread): 20:57:59  Runtime Error in test unique_my_second_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:57:59.288890 (MainThread): 20:57:59    404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+2022-03-24 20:57:59.288961 (MainThread): 20:57:59    
+2022-03-24 20:57:59.289028 (MainThread): 20:57:59    Location: EU
+2022-03-24 20:57:59.289094 (MainThread): 20:57:59    Job ID: aea7c5a8-83bc-4ebb-ac48-d5164d8e71f4
+2022-03-24 20:57:59.289159 (MainThread): 20:57:59    
+2022-03-24 20:57:59.289227 (MainThread): 20:57:59  
+2022-03-24 20:57:59.289302 (MainThread): 20:57:59  Runtime Error in test unique_my_first_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:57:59.289370 (MainThread): 20:57:59    404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+2022-03-24 20:57:59.289433 (MainThread): 20:57:59    
+2022-03-24 20:57:59.289496 (MainThread): 20:57:59    Location: EU
+2022-03-24 20:57:59.289686 (MainThread): 20:57:59    Job ID: 494f935e-a25a-4053-a203-9d016e91fc53
+2022-03-24 20:57:59.289809 (MainThread): 20:57:59    
+2022-03-24 20:57:59.289883 (MainThread): 20:57:59  
+2022-03-24 20:57:59.289963 (MainThread): 20:57:59  Runtime Error in test not_null_my_first_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:57:59.290031 (MainThread): 20:57:59    404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+2022-03-24 20:57:59.290094 (MainThread): 20:57:59    
+2022-03-24 20:57:59.290156 (MainThread): 20:57:59    Location: EU
+2022-03-24 20:57:59.290218 (MainThread): 20:57:59    Job ID: c4e0d87f-ecac-44b0-b099-1a4b2370b46e
+2022-03-24 20:57:59.290280 (MainThread): 20:57:59    
+2022-03-24 20:57:59.290345 (MainThread): 20:57:59  
+2022-03-24 20:57:59.290417 (MainThread): 20:57:59  Runtime Error in test not_null_my_second_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:57:59.290481 (MainThread): 20:57:59    404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+2022-03-24 20:57:59.290543 (MainThread): 20:57:59    
+2022-03-24 20:57:59.290605 (MainThread): 20:57:59    Location: EU
+2022-03-24 20:57:59.290667 (MainThread): 20:57:59    Job ID: 67b2c7f1-8361-4d29-9468-f6eb9f74edaa
+2022-03-24 20:57:59.290728 (MainThread): 20:57:59    
+2022-03-24 20:57:59.290803 (MainThread): 20:57:59  
+2022-03-24 20:57:59.290883 (MainThread): 20:57:59  Done. PASS=0 WARN=0 ERROR=4 SKIP=0 TOTAL=4
+2022-03-24 20:57:59.788682 (Thread-34): handling poll request
+2022-03-24 20:57:59.789140 (Thread-34): 20:57:59  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d215511c0>]}
+2022-03-24 20:57:59.791511 (Thread-34): sending response (<Response 63786 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:00.368189 (Thread-35): handling status request
+2022-03-24 20:58:00.368641 (Thread-35): 20:58:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d225adaf0>]}
+2022-03-24 20:58:00.395597 (Thread-35): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:00.407420 (Thread-36): handling status request
+2022-03-24 20:58:00.407786 (Thread-36): 20:58:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d215513d0>]}
+2022-03-24 20:58:00.408788 (Thread-36): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:19.234561 (Thread-37): handling status request
+2022-03-24 20:58:19.234911 (Thread-37): 20:58:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d21551490>]}
+2022-03-24 20:58:19.235825 (Thread-37): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:19.465413 (Thread-38): handling status request
+2022-03-24 20:58:19.465758 (Thread-38): 20:58:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d215514c0>]}
+2022-03-24 20:58:19.466802 (Thread-38): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:19.473839 (Thread-39): handling cli_args request
+2022-03-24 20:58:19.474252 (Thread-39): 20:58:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d215519a0>]}
+2022-03-24 20:58:21.934649 (Thread-39): sending response (<Response 138 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:22.025066 (MainThread): 20:58:22  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-24 20:58:22.025608 (MainThread): 20:58:22  Partial parsing enabled, no changes found, skipping parsing
+2022-03-24 20:58:22.032639 (MainThread): 20:58:22  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd22fc734-2891-4523-90de-8b849a5f4f46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f32c8299670>]}
+2022-03-24 20:58:22.059803 (MainThread): 20:58:22  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd22fc734-2891-4523-90de-8b849a5f4f46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f32c8278fa0>]}
+2022-03-24 20:58:22.060174 (MainThread): 20:58:22  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:58:22.061576 (MainThread): 20:58:22  
+2022-03-24 20:58:22.061947 (MainThread): 20:58:22  Acquiring new bigquery connection "master"
+2022-03-24 20:58:22.062992 (ThreadPoolExecutor-1_0): 20:58:22  Acquiring new bigquery connection "list_whejna-vmo2-composer-env_dbt_whejna"
+2022-03-24 20:58:22.063150 (ThreadPoolExecutor-1_0): 20:58:22  Opening a new connection, currently in state init
+2022-03-24 20:58:22.170190 (Thread-40): handling poll request
+2022-03-24 20:58:22.170767 (Thread-40): 20:58:22  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d21553f10>]}
+2022-03-24 20:58:22.171723 (Thread-40): sending response (<Response 3361 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:22.283466 (MainThread): 20:58:22  Concurrency: 4 threads (target='default')
+2022-03-24 20:58:22.283661 (MainThread): 20:58:22  
+2022-03-24 20:58:22.287943 (Thread-1): 20:58:22  Began running node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:58:22.288232 (Thread-1): 20:58:22  1 of 4 START test not_null_my_first_dbt_model_id................................ [RUN]
+2022-03-24 20:58:22.288666 (Thread-1): 20:58:22  Acquiring new bigquery connection "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:58:22.288786 (Thread-1): 20:58:22  Began compiling node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:58:22.288912 (Thread-1): 20:58:22  Compiling test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:58:22.293022 (Thread-2): 20:58:22  Began running node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:58:22.293241 (Thread-2): 20:58:22  2 of 4 START test not_null_my_second_dbt_model_id............................... [RUN]
+2022-03-24 20:58:22.293610 (Thread-2): 20:58:22  Acquiring new bigquery connection "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:58:22.293726 (Thread-2): 20:58:22  Began compiling node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:58:22.293822 (Thread-2): 20:58:22  Compiling test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:58:22.307217 (Thread-2): 20:58:22  Writing injected SQL for node "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:58:22.307600 (Thread-3): 20:58:22  Began running node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:58:22.307792 (Thread-3): 20:58:22  3 of 4 START test unique_my_first_dbt_model_id.................................. [RUN]
+2022-03-24 20:58:22.308100 (Thread-3): 20:58:22  Acquiring new bigquery connection "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:58:22.308198 (Thread-3): 20:58:22  Began compiling node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:58:22.308355 (Thread-3): 20:58:22  Compiling test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:58:22.314050 (Thread-1): 20:58:22  Writing injected SQL for node "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:58:22.314424 (Thread-4): 20:58:22  Began running node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:58:22.314624 (Thread-4): 20:58:22  4 of 4 START test unique_my_second_dbt_model_id................................. [RUN]
+2022-03-24 20:58:22.314958 (Thread-4): 20:58:22  Acquiring new bigquery connection "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:58:22.315059 (Thread-4): 20:58:22  Began compiling node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:58:22.315155 (Thread-4): 20:58:22  Compiling test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:58:22.322310 (Thread-3): 20:58:22  Writing injected SQL for node "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:58:22.324272 (Thread-4): 20:58:22  Writing injected SQL for node "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:58:22.332628 (Thread-2): 20:58:22  finished collecting timing info
+2022-03-24 20:58:22.332894 (Thread-2): 20:58:22  Began executing node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:58:22.353721 (Thread-1): 20:58:22  finished collecting timing info
+2022-03-24 20:58:22.353942 (Thread-1): 20:58:22  Began executing node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:58:22.358238 (Thread-1): 20:58:22  Writing runtime SQL for node "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:58:22.359810 (Thread-2): 20:58:22  Writing runtime SQL for node "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:58:22.365638 (Thread-3): 20:58:22  finished collecting timing info
+2022-03-24 20:58:22.365880 (Thread-3): 20:58:22  Began executing node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:58:22.367900 (Thread-3): 20:58:22  Writing runtime SQL for node "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:58:22.368261 (Thread-4): 20:58:22  finished collecting timing info
+2022-03-24 20:58:22.368552 (Thread-4): 20:58:22  Began executing node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:58:22.371410 (Thread-4): 20:58:22  Writing runtime SQL for node "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:58:22.377897 (Thread-2): 20:58:22  Opening a new connection, currently in state init
+2022-03-24 20:58:22.378340 (Thread-1): 20:58:22  Opening a new connection, currently in state closed
+2022-03-24 20:58:22.383177 (Thread-2): 20:58:22  On test.my_new_project.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:58:22.384240 (Thread-1): 20:58:22  On test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:58:22.385674 (Thread-3): 20:58:22  Opening a new connection, currently in state init
+2022-03-24 20:58:22.386080 (Thread-4): 20:58:22  Opening a new connection, currently in state init
+2022-03-24 20:58:22.391490 (Thread-3): 20:58:22  On test.my_new_project.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:58:22.394524 (Thread-4): 20:58:22  On test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:58:22.674169 (Thread-3): 20:58:22  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:58:22.674404 (Thread-3): 20:58:22  BigQuery adapter: 404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+
+Location: EU
+Job ID: 11cec3cd-f017-42c4-85c0-7c6c0e745ab3
+
+2022-03-24 20:58:22.674610 (Thread-3): 20:58:22  finished collecting timing info
+2022-03-24 20:58:22.675052 (Thread-3): 20:58:22  Runtime Error in test unique_my_first_dbt_model_id (models/example/schema.yml)
+  404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+  
+  Location: EU
+  Job ID: 11cec3cd-f017-42c4-85c0-7c6c0e745ab3
+  
+2022-03-24 20:58:22.675288 (Thread-3): 20:58:22  3 of 4 ERROR unique_my_first_dbt_model_id....................................... [ERROR in 0.37s]
+2022-03-24 20:58:22.675405 (Thread-3): 20:58:22  Finished running node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:58:22.677353 (Thread-1): 20:58:22  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:58:22.677527 (Thread-1): 20:58:22  BigQuery adapter: 404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+
+Location: EU
+Job ID: f5a8d480-608b-4db7-8498-7c827ddb4a89
+
+2022-03-24 20:58:22.677712 (Thread-1): 20:58:22  finished collecting timing info
+2022-03-24 20:58:22.678232 (Thread-1): 20:58:22  Runtime Error in test not_null_my_first_dbt_model_id (models/example/schema.yml)
+  404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+  
+  Location: EU
+  Job ID: f5a8d480-608b-4db7-8498-7c827ddb4a89
+  
+2022-03-24 20:58:22.678521 (Thread-1): 20:58:22  1 of 4 ERROR not_null_my_first_dbt_model_id..................................... [ERROR in 0.39s]
+2022-03-24 20:58:22.678669 (Thread-1): 20:58:22  Finished running node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:58:22.711661 (Thread-4): 20:58:22  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:58:22.711867 (Thread-4): 20:58:22  BigQuery adapter: 404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+
+Location: EU
+Job ID: 9dc23083-49b2-4672-8264-2a66dee6fc59
+
+2022-03-24 20:58:22.712040 (Thread-4): 20:58:22  finished collecting timing info
+2022-03-24 20:58:22.712476 (Thread-4): 20:58:22  Runtime Error in test unique_my_second_dbt_model_id (models/example/schema.yml)
+  404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+  
+  Location: EU
+  Job ID: 9dc23083-49b2-4672-8264-2a66dee6fc59
+  
+2022-03-24 20:58:22.712662 (Thread-4): 20:58:22  4 of 4 ERROR unique_my_second_dbt_model_id...................................... [ERROR in 0.40s]
+2022-03-24 20:58:22.712780 (Thread-4): 20:58:22  Finished running node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:58:22.731382 (Thread-2): 20:58:22  BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:58:22.731591 (Thread-2): 20:58:22  BigQuery adapter: 404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+
+Location: EU
+Job ID: 75aa2f01-d91b-4fdd-a0c1-ac0866914eed
+
+2022-03-24 20:58:22.731767 (Thread-2): 20:58:22  finished collecting timing info
+2022-03-24 20:58:22.732160 (Thread-2): 20:58:22  Runtime Error in test not_null_my_second_dbt_model_id (models/example/schema.yml)
+  404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+  
+  Location: EU
+  Job ID: 75aa2f01-d91b-4fdd-a0c1-ac0866914eed
+  
+2022-03-24 20:58:22.732397 (Thread-2): 20:58:22  2 of 4 ERROR not_null_my_second_dbt_model_id.................................... [ERROR in 0.44s]
+2022-03-24 20:58:22.732524 (Thread-2): 20:58:22  Finished running node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:58:22.734598 (MainThread): 20:58:22  Acquiring new bigquery connection "master"
+2022-03-24 20:58:22.734962 (MainThread): 20:58:22  
+2022-03-24 20:58:22.735066 (MainThread): 20:58:22  Finished running 4 tests in 0.67s.
+2022-03-24 20:58:22.735152 (MainThread): 20:58:22  Connection 'master' was properly closed.
+2022-03-24 20:58:22.735222 (MainThread): 20:58:22  Connection 'test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710' was properly closed.
+2022-03-24 20:58:22.735290 (MainThread): 20:58:22  Connection 'test.my_new_project.not_null_my_second_dbt_model_id.151b76d778' was properly closed.
+2022-03-24 20:58:22.735355 (MainThread): 20:58:22  Connection 'test.my_new_project.unique_my_first_dbt_model_id.16e066b321' was properly closed.
+2022-03-24 20:58:22.735418 (MainThread): 20:58:22  Connection 'test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+2022-03-24 20:58:22.788153 (MainThread): 20:58:22  
+2022-03-24 20:58:22.788449 (MainThread): 20:58:22  Completed with 4 errors and 0 warnings:
+2022-03-24 20:58:22.788558 (MainThread): 20:58:22  
+2022-03-24 20:58:22.788656 (MainThread): 20:58:22  Runtime Error in test unique_my_first_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:58:22.788737 (MainThread): 20:58:22    404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+2022-03-24 20:58:22.788809 (MainThread): 20:58:22    
+2022-03-24 20:58:22.788878 (MainThread): 20:58:22    Location: EU
+2022-03-24 20:58:22.788945 (MainThread): 20:58:22    Job ID: 11cec3cd-f017-42c4-85c0-7c6c0e745ab3
+2022-03-24 20:58:22.789012 (MainThread): 20:58:22    
+2022-03-24 20:58:22.789081 (MainThread): 20:58:22  
+2022-03-24 20:58:22.789158 (MainThread): 20:58:22  Runtime Error in test not_null_my_first_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:58:22.789229 (MainThread): 20:58:22    404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_first_dbt_model was not found in location EU
+2022-03-24 20:58:22.789348 (MainThread): 20:58:22    
+2022-03-24 20:58:22.789422 (MainThread): 20:58:22    Location: EU
+2022-03-24 20:58:22.789485 (MainThread): 20:58:22    Job ID: f5a8d480-608b-4db7-8498-7c827ddb4a89
+2022-03-24 20:58:22.789548 (MainThread): 20:58:22    
+2022-03-24 20:58:22.789617 (MainThread): 20:58:22  
+2022-03-24 20:58:22.789696 (MainThread): 20:58:22  Runtime Error in test unique_my_second_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:58:22.789764 (MainThread): 20:58:22    404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+2022-03-24 20:58:22.789827 (MainThread): 20:58:22    
+2022-03-24 20:58:22.789890 (MainThread): 20:58:22    Location: EU
+2022-03-24 20:58:22.789953 (MainThread): 20:58:22    Job ID: 9dc23083-49b2-4672-8264-2a66dee6fc59
+2022-03-24 20:58:22.790016 (MainThread): 20:58:22    
+2022-03-24 20:58:22.790084 (MainThread): 20:58:22  
+2022-03-24 20:58:22.790158 (MainThread): 20:58:22  Runtime Error in test not_null_my_second_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:58:22.790226 (MainThread): 20:58:22    404 Not found: Table whejna-vmo2-composer-env:dbt_whejna.my_second_dbt_model was not found in location EU
+2022-03-24 20:58:22.790289 (MainThread): 20:58:22    
+2022-03-24 20:58:22.790351 (MainThread): 20:58:22    Location: EU
+2022-03-24 20:58:22.790598 (MainThread): 20:58:22    Job ID: 75aa2f01-d91b-4fdd-a0c1-ac0866914eed
+2022-03-24 20:58:22.790736 (MainThread): 20:58:22    
+2022-03-24 20:58:22.790823 (MainThread): 20:58:22  
+2022-03-24 20:58:22.790912 (MainThread): 20:58:22  Done. PASS=0 WARN=0 ERROR=4 SKIP=0 TOTAL=4
+2022-03-24 20:58:23.503919 (Thread-41): handling poll request
+2022-03-24 20:58:23.504318 (Thread-41): 20:58:23  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d21553640>]}
+2022-03-24 20:58:23.506480 (Thread-41): sending response (<Response 63787 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:24.089383 (Thread-42): handling status request
+2022-03-24 20:58:24.089812 (Thread-42): 20:58:24  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d21567fa0>]}
+2022-03-24 20:58:24.090884 (Thread-42): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:24.139943 (Thread-43): handling status request
+2022-03-24 20:58:24.140352 (Thread-43): 20:58:24  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2156f5e0>]}
+2022-03-24 20:58:24.141247 (Thread-43): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:40.023663 (Thread-44): handling status request
+2022-03-24 20:58:40.024059 (Thread-44): 20:58:40  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2156feb0>]}
+2022-03-24 20:58:40.024964 (Thread-44): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:40.275053 (Thread-45): handling cli_args request
+2022-03-24 20:58:40.275398 (Thread-45): 20:58:40  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2051caf0>]}
+2022-03-24 20:58:40.463823 (Thread-46): handling status request
+2022-03-24 20:58:40.464684 (Thread-46): 20:58:40  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2156f9a0>]}
+2022-03-24 20:58:40.466111 (Thread-46): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:42.777021 (Thread-45): sending response (<Response 138 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:42.858857 (MainThread): 20:58:42  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-24 20:58:42.859349 (MainThread): 20:58:42  Partial parsing enabled, no changes found, skipping parsing
+2022-03-24 20:58:42.866194 (MainThread): 20:58:42  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '737f84e9-515f-4403-ad40-d4eb2c4da66e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb9043757c0>]}
+2022-03-24 20:58:42.894714 (MainThread): 20:58:42  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '737f84e9-515f-4403-ad40-d4eb2c4da66e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb904400d90>]}
+2022-03-24 20:58:42.895059 (MainThread): 20:58:42  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:58:42.896401 (MainThread): 20:58:42  
+2022-03-24 20:58:42.896788 (MainThread): 20:58:42  Acquiring new bigquery connection "master"
+2022-03-24 20:58:42.897972 (ThreadPoolExecutor-0_0): 20:58:42  Acquiring new bigquery connection "list_whejna-vmo2-composer-env"
+2022-03-24 20:58:42.898160 (ThreadPoolExecutor-0_0): 20:58:42  Opening a new connection, currently in state init
+2022-03-24 20:58:43.016698 (Thread-47): handling poll request
+2022-03-24 20:58:43.017083 (Thread-47): 20:58:43  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d20522190>]}
+2022-03-24 20:58:43.017820 (Thread-47): sending response (<Response 3350 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:43.617993 (ThreadPoolExecutor-1_0): 20:58:43  Acquiring new bigquery connection "list_whejna-vmo2-composer-env_dbt_whejna"
+2022-03-24 20:58:43.618180 (ThreadPoolExecutor-1_0): 20:58:43  Opening a new connection, currently in state closed
+2022-03-24 20:58:43.858602 (MainThread): 20:58:43  Concurrency: 4 threads (target='default')
+2022-03-24 20:58:43.858824 (MainThread): 20:58:43  
+2022-03-24 20:58:43.861762 (Thread-1): 20:58:43  Began running node model.my_new_project.my_first_dbt_model
+2022-03-24 20:58:43.862572 (Thread-1): 20:58:43  1 of 2 START table model dbt_whejna.my_first_dbt_model.......................... [RUN]
+2022-03-24 20:58:43.862958 (Thread-1): 20:58:43  Acquiring new bigquery connection "model.my_new_project.my_first_dbt_model"
+2022-03-24 20:58:43.863081 (Thread-1): 20:58:43  Began compiling node model.my_new_project.my_first_dbt_model
+2022-03-24 20:58:43.863192 (Thread-1): 20:58:43  Compiling model.my_new_project.my_first_dbt_model
+2022-03-24 20:58:43.866087 (Thread-1): 20:58:43  Writing injected SQL for node "model.my_new_project.my_first_dbt_model"
+2022-03-24 20:58:43.875523 (Thread-1): 20:58:43  finished collecting timing info
+2022-03-24 20:58:43.875747 (Thread-1): 20:58:43  Began executing node model.my_new_project.my_first_dbt_model
+2022-03-24 20:58:43.910839 (Thread-1): 20:58:43  Writing runtime SQL for node "model.my_new_project.my_first_dbt_model"
+2022-03-24 20:58:43.920395 (Thread-1): 20:58:43  Opening a new connection, currently in state closed
+2022-03-24 20:58:43.925169 (Thread-1): 20:58:43  On model.my_new_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_first_dbt_model"} */
+
+
+  create or replace table `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+  
+  
+  OPTIONS()
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+  
+2022-03-24 20:58:44.252366 (Thread-48): handling poll request
+2022-03-24 20:58:44.252819 (Thread-48): 20:58:44  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d20523970>]}
+2022-03-24 20:58:44.253555 (Thread-48): sending response (<Response 6673 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:45.484479 (Thread-49): handling poll request
+2022-03-24 20:58:45.484917 (Thread-49): 20:58:45  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d20523df0>]}
+2022-03-24 20:58:45.485540 (Thread-49): sending response (<Response 286 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:46.153512 (Thread-1): 20:58:46  finished collecting timing info
+2022-03-24 20:58:46.154023 (Thread-1): 20:58:46  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '737f84e9-515f-4403-ad40-d4eb2c4da66e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb90435cc40>]}
+2022-03-24 20:58:46.154558 (Thread-1): 20:58:46  1 of 2 OK created table model dbt_whejna.my_first_dbt_model..................... [CREATE TABLE (2.0 rows, 0 processed) in 2.29s]
+2022-03-24 20:58:46.154681 (Thread-1): 20:58:46  Finished running node model.my_new_project.my_first_dbt_model
+2022-03-24 20:58:46.155654 (Thread-3): 20:58:46  Began running node model.my_new_project.my_second_dbt_model
+2022-03-24 20:58:46.155917 (Thread-3): 20:58:46  2 of 2 START view model dbt_whejna.my_second_dbt_model.......................... [RUN]
+2022-03-24 20:58:46.156216 (Thread-3): 20:58:46  Acquiring new bigquery connection "model.my_new_project.my_second_dbt_model"
+2022-03-24 20:58:46.156354 (Thread-3): 20:58:46  Began compiling node model.my_new_project.my_second_dbt_model
+2022-03-24 20:58:46.156452 (Thread-3): 20:58:46  Compiling model.my_new_project.my_second_dbt_model
+2022-03-24 20:58:46.159368 (Thread-3): 20:58:46  Writing injected SQL for node "model.my_new_project.my_second_dbt_model"
+2022-03-24 20:58:46.168856 (Thread-3): 20:58:46  finished collecting timing info
+2022-03-24 20:58:46.169134 (Thread-3): 20:58:46  Began executing node model.my_new_project.my_second_dbt_model
+2022-03-24 20:58:46.189848 (Thread-3): 20:58:46  Writing runtime SQL for node "model.my_new_project.my_second_dbt_model"
+2022-03-24 20:58:46.200586 (Thread-3): 20:58:46  Opening a new connection, currently in state init
+2022-03-24 20:58:46.205350 (Thread-3): 20:58:46  On model.my_new_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_second_dbt_model"} */
+
+
+  create or replace view `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+where id = 1;
+
+
+2022-03-24 20:58:46.710026 (Thread-50): handling poll request
+2022-03-24 20:58:46.710435 (Thread-50): 20:58:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204c1c70>]}
+2022-03-24 20:58:46.711141 (Thread-50): sending response (<Response 7036 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:46.980029 (Thread-3): 20:58:46  finished collecting timing info
+2022-03-24 20:58:46.980577 (Thread-3): 20:58:46  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '737f84e9-515f-4403-ad40-d4eb2c4da66e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb9012841f0>]}
+2022-03-24 20:58:46.981137 (Thread-3): 20:58:46  2 of 2 OK created view model dbt_whejna.my_second_dbt_model..................... [OK in 0.82s]
+2022-03-24 20:58:46.981274 (Thread-3): 20:58:46  Finished running node model.my_new_project.my_second_dbt_model
+2022-03-24 20:58:46.982817 (MainThread): 20:58:46  Acquiring new bigquery connection "master"
+2022-03-24 20:58:46.983149 (MainThread): 20:58:46  
+2022-03-24 20:58:46.983247 (MainThread): 20:58:46  Finished running 1 table model, 1 view model in 4.09s.
+2022-03-24 20:58:46.983331 (MainThread): 20:58:46  Connection 'master' was properly closed.
+2022-03-24 20:58:46.983400 (MainThread): 20:58:46  Connection 'model.my_new_project.my_first_dbt_model' was properly closed.
+2022-03-24 20:58:46.983487 (MainThread): 20:58:46  Connection 'model.my_new_project.my_second_dbt_model' was properly closed.
+2022-03-24 20:58:47.032755 (MainThread): 20:58:47  
+2022-03-24 20:58:47.033000 (MainThread): 20:58:47  Completed successfully
+2022-03-24 20:58:47.033104 (MainThread): 20:58:47  
+2022-03-24 20:58:47.033193 (MainThread): 20:58:47  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+2022-03-24 20:58:47.940669 (Thread-51): handling poll request
+2022-03-24 20:58:47.941010 (Thread-51): 20:58:47  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204dfaf0>]}
+2022-03-24 20:58:47.942198 (Thread-51): sending response (<Response 11442 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:48.517931 (Thread-52): handling status request
+2022-03-24 20:58:48.518268 (Thread-52): 20:58:48  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204dfca0>]}
+2022-03-24 20:58:48.519178 (Thread-52): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:48.543568 (Thread-53): handling status request
+2022-03-24 20:58:48.543914 (Thread-53): 20:58:48  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204dffd0>]}
+2022-03-24 20:58:48.544841 (Thread-53): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:48.623388 (Thread-54): handling status request
+2022-03-24 20:58:48.623727 (Thread-54): 20:58:48  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204c1eb0>]}
+2022-03-24 20:58:48.624750 (Thread-54): sending response (<Response 15763 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:58:48.632691 (Thread-55): handling list request
+2022-03-24 20:58:48.633058 (Thread-55): 20:58:48  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d205236d0>]}
+2022-03-24 20:58:48.661303 (Thread-55): 20:58:48  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204bb190>]}
+2022-03-24 20:58:48.661747 (Thread-55): 20:58:48  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:58:48.662895 (Thread-55): 20:58:48  The selection criterion '+1648155360754/__unsaved/Statement' does not match any nodes
+2022-03-24 20:58:48.663107 (Thread-55): 20:58:48  The selection criterion '1.sql+' does not match any nodes
+2022-03-24 20:58:48.663202 (Thread-55): 20:58:48  No nodes selected!
+2022-03-24 20:58:48.664943 (Thread-55): sending response (<Response 2348 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:02.386873 (Thread-56): handling status request
+2022-03-24 20:59:02.387232 (Thread-56): 20:59:02  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204e94c0>]}
+2022-03-24 20:59:02.388126 (Thread-56): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:02.628607 (Thread-57): handling status request
+2022-03-24 20:59:02.629034 (Thread-57): 20:59:02  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204dfee0>]}
+2022-03-24 20:59:02.629873 (Thread-57): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:02.679607 (Thread-58): handling cli_args request
+2022-03-24 20:59:02.679948 (Thread-58): 20:59:02  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204e9cd0>]}
+2022-03-24 20:59:05.124693 (Thread-58): sending response (<Response 138 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:05.203719 (MainThread): 20:59:05  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-24 20:59:05.204183 (MainThread): 20:59:05  Partial parsing enabled, no changes found, skipping parsing
+2022-03-24 20:59:05.210638 (MainThread): 20:59:05  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6cb3296d-ca2f-49c3-b0ac-c4447ef99ea0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad9de0760>]}
+2022-03-24 20:59:05.238111 (MainThread): 20:59:05  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6cb3296d-ca2f-49c3-b0ac-c4447ef99ea0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcad9e6cd30>]}
+2022-03-24 20:59:05.238477 (MainThread): 20:59:05  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:59:05.239778 (MainThread): 20:59:05  
+2022-03-24 20:59:05.240137 (MainThread): 20:59:05  Acquiring new bigquery connection "master"
+2022-03-24 20:59:05.241255 (ThreadPoolExecutor-1_0): 20:59:05  Acquiring new bigquery connection "list_whejna-vmo2-composer-env_dbt_whejna"
+2022-03-24 20:59:05.241392 (ThreadPoolExecutor-1_0): 20:59:05  Opening a new connection, currently in state init
+2022-03-24 20:59:05.344990 (Thread-59): handling poll request
+2022-03-24 20:59:05.345439 (Thread-59): 20:59:05  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204bbbe0>]}
+2022-03-24 20:59:05.346316 (Thread-59): sending response (<Response 3362 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:05.468489 (MainThread): 20:59:05  Concurrency: 4 threads (target='default')
+2022-03-24 20:59:05.468657 (MainThread): 20:59:05  
+2022-03-24 20:59:05.472106 (Thread-1): 20:59:05  Began running node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:59:05.472392 (Thread-1): 20:59:05  1 of 4 START test not_null_my_first_dbt_model_id................................ [RUN]
+2022-03-24 20:59:05.472724 (Thread-1): 20:59:05  Acquiring new bigquery connection "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:59:05.472825 (Thread-1): 20:59:05  Began compiling node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:59:05.472924 (Thread-1): 20:59:05  Compiling test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:59:05.477563 (Thread-2): 20:59:05  Began running node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:59:05.477772 (Thread-2): 20:59:05  2 of 4 START test not_null_my_second_dbt_model_id............................... [RUN]
+2022-03-24 20:59:05.478112 (Thread-2): 20:59:05  Acquiring new bigquery connection "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:59:05.478224 (Thread-2): 20:59:05  Began compiling node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:59:05.478316 (Thread-2): 20:59:05  Compiling test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:59:05.482659 (Thread-3): 20:59:05  Began running node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:59:05.482872 (Thread-3): 20:59:05  3 of 4 START test unique_my_first_dbt_model_id.................................. [RUN]
+2022-03-24 20:59:05.483193 (Thread-3): 20:59:05  Acquiring new bigquery connection "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:59:05.483291 (Thread-3): 20:59:05  Began compiling node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:59:05.483380 (Thread-3): 20:59:05  Compiling test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:59:05.487744 (Thread-4): 20:59:05  Began running node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:59:05.487950 (Thread-4): 20:59:05  4 of 4 START test unique_my_second_dbt_model_id................................. [RUN]
+2022-03-24 20:59:05.488330 (Thread-4): 20:59:05  Acquiring new bigquery connection "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:59:05.488458 (Thread-4): 20:59:05  Began compiling node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:59:05.488573 (Thread-4): 20:59:05  Compiling test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:59:05.504946 (Thread-3): 20:59:05  Writing injected SQL for node "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:59:05.507782 (Thread-1): 20:59:05  Writing injected SQL for node "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:59:05.509327 (Thread-2): 20:59:05  Writing injected SQL for node "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:59:05.509667 (Thread-4): 20:59:05  Writing injected SQL for node "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:59:05.522317 (Thread-3): 20:59:05  finished collecting timing info
+2022-03-24 20:59:05.522615 (Thread-3): 20:59:05  Began executing node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:59:05.527938 (Thread-4): 20:59:05  finished collecting timing info
+2022-03-24 20:59:05.528135 (Thread-4): 20:59:05  Began executing node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:59:05.533061 (Thread-2): 20:59:05  finished collecting timing info
+2022-03-24 20:59:05.533327 (Thread-2): 20:59:05  Began executing node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:59:05.543817 (Thread-1): 20:59:05  finished collecting timing info
+2022-03-24 20:59:05.544045 (Thread-1): 20:59:05  Began executing node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:59:05.578163 (Thread-1): 20:59:05  Writing runtime SQL for node "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"
+2022-03-24 20:59:05.578962 (Thread-3): 20:59:05  Writing runtime SQL for node "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"
+2022-03-24 20:59:05.579834 (Thread-2): 20:59:05  Writing runtime SQL for node "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"
+2022-03-24 20:59:05.580204 (Thread-4): 20:59:05  Writing runtime SQL for node "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"
+2022-03-24 20:59:05.593452 (Thread-3): 20:59:05  Opening a new connection, currently in state init
+2022-03-24 20:59:05.594009 (Thread-1): 20:59:05  Opening a new connection, currently in state closed
+2022-03-24 20:59:05.594427 (Thread-4): 20:59:05  Opening a new connection, currently in state init
+2022-03-24 20:59:05.594706 (Thread-2): 20:59:05  Opening a new connection, currently in state init
+2022-03-24 20:59:05.599355 (Thread-1): 20:59:05  On test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:59:05.601843 (Thread-4): 20:59:05  On test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:59:05.602299 (Thread-3): 20:59:05  On test.my_new_project.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+  
+  select id as unique_field
+  from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+  where id is not null
+  
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:59:05.603841 (Thread-2): 20:59:05  On test.my_new_project.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "test.my_new_project.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+2022-03-24 20:59:06.570370 (Thread-60): handling poll request
+2022-03-24 20:59:06.570708 (Thread-60): 20:59:06  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d417b9610>]}
+2022-03-24 20:59:06.572176 (Thread-60): sending response (<Response 22652 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:07.844140 (Thread-61): handling poll request
+2022-03-24 20:59:07.844555 (Thread-61): 20:59:07  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204bb280>]}
+2022-03-24 20:59:07.845061 (Thread-61): sending response (<Response 287 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:09.079957 (Thread-62): handling poll request
+2022-03-24 20:59:09.080321 (Thread-62): 20:59:09  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204b01c0>]}
+2022-03-24 20:59:09.080830 (Thread-62): sending response (<Response 287 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:09.341714 (Thread-2): 20:59:09  finished collecting timing info
+2022-03-24 20:59:09.342385 (Thread-2): 20:59:09  2 of 4 PASS not_null_my_second_dbt_model_id..................................... [PASS in 3.86s]
+2022-03-24 20:59:09.342543 (Thread-2): 20:59:09  Finished running node test.my_new_project.not_null_my_second_dbt_model_id.151b76d778
+2022-03-24 20:59:10.088329 (Thread-3): 20:59:10  finished collecting timing info
+2022-03-24 20:59:10.088848 (Thread-3): 20:59:10  3 of 4 PASS unique_my_first_dbt_model_id........................................ [PASS in 4.61s]
+2022-03-24 20:59:10.088982 (Thread-3): 20:59:10  Finished running node test.my_new_project.unique_my_first_dbt_model_id.16e066b321
+2022-03-24 20:59:10.328419 (Thread-63): handling poll request
+2022-03-24 20:59:10.328762 (Thread-63): 20:59:10  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d204c17c0>]}
+2022-03-24 20:59:10.329338 (Thread-63): sending response (<Response 3085 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:10.366348 (Thread-1): 20:59:10  finished collecting timing info
+2022-03-24 20:59:10.366994 (Thread-1): 20:59:10  1 of 4 FAIL 1 not_null_my_first_dbt_model_id.................................... [FAIL 1 in 4.89s]
+2022-03-24 20:59:10.367200 (Thread-1): 20:59:10  Finished running node test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710
+2022-03-24 20:59:10.449558 (Thread-4): 20:59:10  finished collecting timing info
+2022-03-24 20:59:10.450011 (Thread-4): 20:59:10  4 of 4 PASS unique_my_second_dbt_model_id....................................... [PASS in 4.96s]
+2022-03-24 20:59:10.450141 (Thread-4): 20:59:10  Finished running node test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493
+2022-03-24 20:59:10.452157 (MainThread): 20:59:10  Acquiring new bigquery connection "master"
+2022-03-24 20:59:10.452644 (MainThread): 20:59:10  
+2022-03-24 20:59:10.452816 (MainThread): 20:59:10  Finished running 4 tests in 5.21s.
+2022-03-24 20:59:10.452955 (MainThread): 20:59:10  Connection 'master' was properly closed.
+2022-03-24 20:59:10.453074 (MainThread): 20:59:10  Connection 'test.my_new_project.not_null_my_first_dbt_model_id.5fb22c2710' was properly closed.
+2022-03-24 20:59:10.453185 (MainThread): 20:59:10  Connection 'test.my_new_project.not_null_my_second_dbt_model_id.151b76d778' was properly closed.
+2022-03-24 20:59:10.453299 (MainThread): 20:59:10  Connection 'test.my_new_project.unique_my_first_dbt_model_id.16e066b321' was properly closed.
+2022-03-24 20:59:10.453411 (MainThread): 20:59:10  Connection 'test.my_new_project.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+2022-03-24 20:59:10.504021 (MainThread): 20:59:10  
+2022-03-24 20:59:10.504383 (MainThread): 20:59:10  Completed with 1 error and 0 warnings:
+2022-03-24 20:59:10.504563 (MainThread): 20:59:10  
+2022-03-24 20:59:10.504738 (MainThread): 20:59:10  Failure in test not_null_my_first_dbt_model_id (models/example/schema.yml)
+2022-03-24 20:59:10.504876 (MainThread): 20:59:10    Got 1 result, configured to fail if != 0
+2022-03-24 20:59:10.505007 (MainThread): 20:59:10  
+2022-03-24 20:59:10.505145 (MainThread): 20:59:10    compiled SQL at target/compiled/my_new_project/models/example/schema.yml/not_null_my_first_dbt_model_id.sql
+2022-03-24 20:59:10.505305 (MainThread): 20:59:10  
+2022-03-24 20:59:10.505448 (MainThread): 20:59:10  Done. PASS=3 WARN=0 ERROR=1 SKIP=0 TOTAL=4
+2022-03-24 20:59:11.580821 (Thread-64): handling poll request
+2022-03-24 20:59:11.581169 (Thread-64): 20:59:11  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2156fdc0>]}
+2022-03-24 20:59:11.607220 (Thread-64): sending response (<Response 19664 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:12.149342 (Thread-65): handling status request
+2022-03-24 20:59:12.149686 (Thread-65): 20:59:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2156f280>]}
+2022-03-24 20:59:12.150745 (Thread-65): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:12.188558 (Thread-66): handling status request
+2022-03-24 20:59:12.188922 (Thread-66): 20:59:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2156f700>]}
+2022-03-24 20:59:12.189946 (Thread-66): sending response (<Response 15785 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:27.129043 (Thread-67): handling status request
+2022-03-24 20:59:27.129389 (Thread-67): 20:59:27  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2155b850>]}
+2022-03-24 20:59:27.130316 (Thread-67): sending response (<Response 15763 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:27.137951 (Thread-68): handling list request
+2022-03-24 20:59:27.138314 (Thread-68): 20:59:27  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2155b640>]}
+2022-03-24 20:59:27.166720 (Thread-68): 20:59:27  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2156f880>]}
+2022-03-24 20:59:27.167116 (Thread-68): 20:59:27  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:59:27.168197 (Thread-68): 20:59:27  The selection criterion '+1648155360754/__unsaved/Statement' does not match any nodes
+2022-03-24 20:59:27.168460 (Thread-68): 20:59:27  The selection criterion '1.sql+' does not match any nodes
+2022-03-24 20:59:27.168562 (Thread-68): 20:59:27  No nodes selected!
+2022-03-24 20:59:27.170277 (Thread-68): sending response (<Response 2348 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:28.930575 (Thread-69): handling status request
+2022-03-24 20:59:28.931007 (Thread-69): 20:59:28  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2051ca60>]}
+2022-03-24 20:59:28.932157 (Thread-69): sending response (<Response 15763 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:28.939332 (Thread-70): handling list request
+2022-03-24 20:59:28.939784 (Thread-70): 20:59:28  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d2155bfa0>]}
+2022-03-24 20:59:28.970619 (Thread-70): 20:59:28  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d21551cd0>]}
+2022-03-24 20:59:28.971047 (Thread-70): 20:59:28  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:59:28.972149 (Thread-70): 20:59:28  The selection criterion '+1648155360754/__unsaved/Statement' does not match any nodes
+2022-03-24 20:59:28.972473 (Thread-70): 20:59:28  The selection criterion '1.sql+' does not match any nodes
+2022-03-24 20:59:28.972589 (Thread-70): 20:59:28  No nodes selected!
+2022-03-24 20:59:28.974479 (Thread-70): sending response (<Response 2348 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:56.964596 (Thread-71): handling status request
+2022-03-24 20:59:56.965090 (Thread-71): 20:59:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d22592520>]}
+2022-03-24 20:59:56.966125 (Thread-71): sending response (<Response 15763 bytes [200 OK]>) to 10.0.42.178
+2022-03-24 20:59:56.976787 (Thread-72): handling list request
+2022-03-24 20:59:56.977164 (Thread-72): 20:59:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d22592eb0>]}
+2022-03-24 20:59:57.008256 (Thread-72): 20:59:57  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '69fa032a-0a85-44b9-8302-1b1bd189db0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d4068fe50>]}
+2022-03-24 20:59:57.008739 (Thread-72): 20:59:57  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-24 20:59:57.009695 (Thread-72): 20:59:57  The selection criterion '+1648155360754/__unsaved/Statement' does not match any nodes
+2022-03-24 20:59:57.009910 (Thread-72): 20:59:57  The selection criterion '1.sql+' does not match any nodes
+2022-03-24 20:59:57.010009 (Thread-72): 20:59:57  No nodes selected!
+2022-03-24 20:59:57.011614 (Thread-72): sending response (<Response 2348 bytes [200 OK]>) to 10.0.42.178
+2022-03-28 12:04:32.290255 (MainThread): Running with dbt=1.0.4
+2022-03-28 12:04:32.444336 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt_rpc.task.server.RPCServerTask'>, debug=None, defer=None, exclude=None, fail_fast=None, host='0.0.0.0', log_cache_events=False, log_format=None, models=None, partial_parse=True, port=8580, printer_width=None, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='rpc', write_json=None)
+2022-03-28 12:04:32.453244 (MainThread): Tracking: tracking
+2022-03-28 12:04:32.469839 (MainThread): 12:04:32  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf2993de80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf0d1c3370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf0d1f2550>]}
+2022-03-28 12:04:32.470243 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=21
+2022-03-28 12:04:32.470511 (MainThread): Supported methods: ['build', 'cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'list', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'source-freshness', 'status', 'test']
+2022-03-28 12:04:32.470647 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2022-03-28 12:04:32.515310 (Thread-12): 12:04:32  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-28 12:04:32.515530 (Thread-12): 12:04:32  Partial parsing enabled, no changes found, skipping parsing
+2022-03-28 12:04:32.521746 (Thread-12): 12:04:32  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '990ae5b4-01fa-463f-a4fd-516cda28784c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf0c164eb0>]}
+2022-03-28 12:04:36.808114 (Thread-13): handling ps request
+2022-03-28 12:04:36.808508 (Thread-13): 12:04:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '990ae5b4-01fa-463f-a4fd-516cda28784c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf0d1e2e50>]}
+2022-03-28 12:04:36.809079 (Thread-13): sending response (<Response 105 bytes [200 OK]>) to 10.0.12.113
+2022-03-28 12:04:36.826370 (Thread-14): handling status request
+2022-03-28 12:04:36.826770 (Thread-14): 12:04:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '990ae5b4-01fa-463f-a4fd-516cda28784c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf0c150e80>]}
+2022-03-28 12:04:36.827240 (Thread-14): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.113
+2022-03-28 12:04:36.948687 (Thread-15): handling status request
+2022-03-28 12:04:36.949056 (Thread-15): 12:04:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '990ae5b4-01fa-463f-a4fd-516cda28784c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf0d1f2610>]}
+2022-03-28 12:04:36.949552 (Thread-15): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.113
+2022-03-28 12:04:36.960305 (Thread-16): handling status request
+2022-03-28 12:04:36.967182 (Thread-16): 12:04:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '990ae5b4-01fa-463f-a4fd-516cda28784c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf0d1e2f40>]}
+2022-03-28 12:04:36.974177 (Thread-16): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.113
+2022-03-28 12:04:38.521092 (Thread-17): handling status request
+2022-03-28 12:04:38.521469 (Thread-17): 12:04:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '990ae5b4-01fa-463f-a4fd-516cda28784c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf0c164ca0>]}
+2022-03-28 12:04:38.521972 (Thread-17): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.113
+2022-03-30 20:33:06.540387 (MainThread): Running with dbt=1.0.4
+2022-03-30 20:33:06.699725 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt_rpc.task.server.RPCServerTask'>, debug=None, defer=None, exclude=None, fail_fast=None, host='0.0.0.0', log_cache_events=False, log_format=None, models=None, partial_parse=True, port=8580, printer_width=None, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='rpc', write_json=None)
+2022-03-30 20:33:06.709067 (MainThread): Tracking: tracking
+2022-03-30 20:33:06.725570 (MainThread): 20:33:06  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4af9a9dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd481840430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd481840400>]}
+2022-03-30 20:33:06.726030 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=21
+2022-03-30 20:33:06.726344 (MainThread): Supported methods: ['build', 'cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'list', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'source-freshness', 'status', 'test']
+2022-03-30 20:33:06.726608 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2022-03-30 20:33:06.781989 (Thread-12): 20:33:06  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-30 20:33:06.782231 (Thread-12): 20:33:06  Partial parsing enabled, no changes found, skipping parsing
+2022-03-30 20:33:06.789307 (Thread-12): 20:33:06  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48073eb80>]}
+2022-03-30 20:33:08.332316 (Thread-13): handling status request
+2022-03-30 20:33:08.332764 (Thread-13): 20:33:08  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4807e6130>]}
+2022-03-30 20:33:08.333441 (Thread-13): sending response (<Response 1241 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:08.399823 (Thread-14): handling status request
+2022-03-30 20:33:08.400253 (Thread-14): 20:33:08  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4807e6640>]}
+2022-03-30 20:33:08.400720 (Thread-14): sending response (<Response 1241 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:08.518533 (Thread-15): handling status request
+2022-03-30 20:33:08.518899 (Thread-15): 20:33:08  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4807abca0>]}
+2022-03-30 20:33:08.519356 (Thread-15): sending response (<Response 1241 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:08.541850 (Thread-16): handling ps request
+2022-03-30 20:33:08.542205 (Thread-16): 20:33:08  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4807ab820>]}
+2022-03-30 20:33:08.542640 (Thread-16): sending response (<Response 105 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:10.073397 (Thread-17): handling status request
+2022-03-30 20:33:10.073777 (Thread-17): 20:33:10  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd481819970>]}
+2022-03-30 20:33:10.074266 (Thread-17): sending response (<Response 1241 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:30.872194 (Thread-18): handling status request
+2022-03-30 20:33:30.874091 (Thread-18): 20:33:30  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4818336d0>]}
+2022-03-30 20:33:30.874569 (Thread-18): sending response (<Response 1241 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:31.116983 (Thread-19): handling status request
+2022-03-30 20:33:31.117395 (Thread-19): 20:33:31  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48183f250>]}
+2022-03-30 20:33:31.117887 (Thread-19): sending response (<Response 1241 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:31.148363 (Thread-20): handling cli_args request
+2022-03-30 20:33:31.148733 (Thread-20): 20:33:31  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd48183fe80>]}
+2022-03-30 20:33:33.401498 (Thread-20): sending response (<Response 138 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:33.511793 (MainThread): 20:33:33  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-30 20:33:33.512286 (MainThread): 20:33:33  Partial parsing enabled, no changes found, skipping parsing
+2022-03-30 20:33:33.518886 (MainThread): 20:33:33  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '84bd84fd-868e-405c-aa49-03bd27a8034d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2bd2a5cc10>]}
+2022-03-30 20:33:33.550119 (MainThread): 20:33:33  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '84bd84fd-868e-405c-aa49-03bd27a8034d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2bd2acad00>]}
+2022-03-30 20:33:33.550489 (MainThread): 20:33:33  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-30 20:33:33.551710 (MainThread): 20:33:33  
+2022-03-30 20:33:33.552063 (MainThread): 20:33:33  Acquiring new bigquery connection "master"
+2022-03-30 20:33:33.553019 (ThreadPoolExecutor-0_0): 20:33:33  Acquiring new bigquery connection "list_whejna-vmo2-composer-env"
+2022-03-30 20:33:33.553242 (ThreadPoolExecutor-0_0): 20:33:33  Opening a new connection, currently in state init
+2022-03-30 20:33:33.617393 (Thread-21): handling poll request
+2022-03-30 20:33:33.617835 (Thread-21): 20:33:33  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd480773dc0>]}
+2022-03-30 20:33:33.618676 (Thread-21): sending response (<Response 3350 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:33.973716 (ThreadPoolExecutor-1_0): 20:33:33  Acquiring new bigquery connection "list_whejna-vmo2-composer-env_dbt_whejna"
+2022-03-30 20:33:33.973922 (ThreadPoolExecutor-1_0): 20:33:33  Opening a new connection, currently in state init
+2022-03-30 20:33:34.215650 (MainThread): 20:33:34  Concurrency: 4 threads (target='default')
+2022-03-30 20:33:34.215829 (MainThread): 20:33:34  
+2022-03-30 20:33:34.218311 (Thread-1): 20:33:34  Began running node model.my_new_project.my_first_dbt_model
+2022-03-30 20:33:34.218618 (Thread-1): 20:33:34  1 of 2 START table model dbt_whejna.my_first_dbt_model.......................... [RUN]
+2022-03-30 20:33:34.218886 (Thread-1): 20:33:34  Acquiring new bigquery connection "model.my_new_project.my_first_dbt_model"
+2022-03-30 20:33:34.218986 (Thread-1): 20:33:34  Began compiling node model.my_new_project.my_first_dbt_model
+2022-03-30 20:33:34.219084 (Thread-1): 20:33:34  Compiling model.my_new_project.my_first_dbt_model
+2022-03-30 20:33:34.222814 (Thread-1): 20:33:34  Writing injected SQL for node "model.my_new_project.my_first_dbt_model"
+2022-03-30 20:33:34.239200 (Thread-1): 20:33:34  finished collecting timing info
+2022-03-30 20:33:34.239370 (Thread-1): 20:33:34  Began executing node model.my_new_project.my_first_dbt_model
+2022-03-30 20:33:34.253013 (Thread-1): 20:33:34  Opening a new connection, currently in state closed
+2022-03-30 20:33:34.516365 (Thread-1): 20:33:34  Writing runtime SQL for node "model.my_new_project.my_first_dbt_model"
+2022-03-30 20:33:34.532820 (Thread-1): 20:33:34  On model.my_new_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_first_dbt_model"} */
+
+
+  create or replace table `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+  
+  
+  OPTIONS()
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+  
+2022-03-30 20:33:34.835211 (Thread-22): handling poll request
+2022-03-30 20:33:34.835587 (Thread-22): 20:33:34  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd480771670>]}
+2022-03-30 20:33:34.836254 (Thread-22): sending response (<Response 6672 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:36.048785 (Thread-23): handling poll request
+2022-03-30 20:33:36.049232 (Thread-23): 20:33:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd480771c40>]}
+2022-03-30 20:33:36.049744 (Thread-23): sending response (<Response 286 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:36.724983 (Thread-1): 20:33:36  finished collecting timing info
+2022-03-30 20:33:36.725430 (Thread-1): 20:33:36  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84bd84fd-868e-405c-aa49-03bd27a8034d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2bd015f220>]}
+2022-03-30 20:33:36.725934 (Thread-1): 20:33:36  1 of 2 OK created table model dbt_whejna.my_first_dbt_model..................... [CREATE TABLE (2.0 rows, 0 processed) in 2.51s]
+2022-03-30 20:33:36.726058 (Thread-1): 20:33:36  Finished running node model.my_new_project.my_first_dbt_model
+2022-03-30 20:33:36.726885 (Thread-3): 20:33:36  Began running node model.my_new_project.my_second_dbt_model
+2022-03-30 20:33:36.727099 (Thread-3): 20:33:36  2 of 2 START view model dbt_whejna.my_second_dbt_model.......................... [RUN]
+2022-03-30 20:33:36.727357 (Thread-3): 20:33:36  Acquiring new bigquery connection "model.my_new_project.my_second_dbt_model"
+2022-03-30 20:33:36.727448 (Thread-3): 20:33:36  Began compiling node model.my_new_project.my_second_dbt_model
+2022-03-30 20:33:36.727535 (Thread-3): 20:33:36  Compiling model.my_new_project.my_second_dbt_model
+2022-03-30 20:33:36.729685 (Thread-3): 20:33:36  Writing injected SQL for node "model.my_new_project.my_second_dbt_model"
+2022-03-30 20:33:36.743622 (Thread-3): 20:33:36  finished collecting timing info
+2022-03-30 20:33:36.743769 (Thread-3): 20:33:36  Began executing node model.my_new_project.my_second_dbt_model
+2022-03-30 20:33:36.761174 (Thread-3): 20:33:36  Writing runtime SQL for node "model.my_new_project.my_second_dbt_model"
+2022-03-30 20:33:36.774864 (Thread-3): 20:33:36  Opening a new connection, currently in state init
+2022-03-30 20:33:36.779368 (Thread-3): 20:33:36  On model.my_new_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_second_dbt_model"} */
+
+
+  create or replace view `whejna-vmo2-composer-env`.`dbt_whejna`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `whejna-vmo2-composer-env`.`dbt_whejna`.`my_first_dbt_model`
+where id = 1;
+
+
+2022-03-30 20:33:37.271122 (Thread-24): handling poll request
+2022-03-30 20:33:37.273373 (Thread-24): 20:33:37  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4807e6670>]}
+2022-03-30 20:33:37.274046 (Thread-24): sending response (<Response 7036 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:37.478798 (Thread-3): 20:33:37  finished collecting timing info
+2022-03-30 20:33:37.479260 (Thread-3): 20:33:37  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84bd84fd-868e-405c-aa49-03bd27a8034d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2bd0175820>]}
+2022-03-30 20:33:37.479776 (Thread-3): 20:33:37  2 of 2 OK created view model dbt_whejna.my_second_dbt_model..................... [OK in 0.75s]
+2022-03-30 20:33:37.479898 (Thread-3): 20:33:37  Finished running node model.my_new_project.my_second_dbt_model
+2022-03-30 20:33:37.481503 (MainThread): 20:33:37  Acquiring new bigquery connection "master"
+2022-03-30 20:33:37.481799 (MainThread): 20:33:37  
+2022-03-30 20:33:37.481898 (MainThread): 20:33:37  Finished running 1 table model, 1 view model in 3.93s.
+2022-03-30 20:33:37.481981 (MainThread): 20:33:37  Connection 'master' was properly closed.
+2022-03-30 20:33:37.482051 (MainThread): 20:33:37  Connection 'list_whejna-vmo2-composer-env' was properly closed.
+2022-03-30 20:33:37.482115 (MainThread): 20:33:37  Connection 'model.my_new_project.my_first_dbt_model' was properly closed.
+2022-03-30 20:33:37.482178 (MainThread): 20:33:37  Connection 'model.my_new_project.my_second_dbt_model' was properly closed.
+2022-03-30 20:33:37.559729 (MainThread): 20:33:37  
+2022-03-30 20:33:37.559953 (MainThread): 20:33:37  Completed successfully
+2022-03-30 20:33:37.560055 (MainThread): 20:33:37  
+2022-03-30 20:33:37.560145 (MainThread): 20:33:37  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+2022-03-30 20:33:39.765912 (Thread-25): handling poll request
+2022-03-30 20:33:39.766302 (Thread-25): 20:33:39  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd480777ac0>]}
+2022-03-30 20:33:39.767412 (Thread-25): sending response (<Response 11750 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:40.383715 (Thread-26): handling status request
+2022-03-30 20:33:40.384104 (Thread-26): 20:33:40  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd480777a90>]}
+2022-03-30 20:33:40.384603 (Thread-26): sending response (<Response 1241 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:33:40.396524 (Thread-27): handling status request
+2022-03-30 20:33:40.396839 (Thread-27): 20:33:40  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'bf692322-db2b-4ce4-9910-d9836ef3fb09', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd4807772b0>]}
+2022-03-30 20:33:40.397340 (Thread-27): sending response (<Response 1241 bytes [200 OK]>) to 10.0.35.36
+2022-03-30 20:37:20.703777 (MainThread): Running with dbt=1.0.4
+2022-03-30 20:37:20.855126 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt_rpc.task.server.RPCServerTask'>, debug=None, defer=None, exclude=None, fail_fast=None, host='0.0.0.0', log_cache_events=False, log_format=None, models=None, partial_parse=True, port=8580, printer_width=None, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='rpc', write_json=None)
+2022-03-30 20:37:20.859303 (MainThread): Tracking: tracking
+2022-03-30 20:37:20.879546 (MainThread): 20:37:20  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa4b9ec2ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa49c240550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa49c240520>]}
+2022-03-30 20:37:20.879938 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=21
+2022-03-30 20:37:20.880242 (MainThread): Supported methods: ['build', 'cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'list', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'source-freshness', 'status', 'test']
+2022-03-30 20:37:20.880444 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2022-03-30 20:37:20.931836 (Thread-12): 20:37:20  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-30 20:37:20.932056 (Thread-12): 20:37:20  Partial parsing enabled, no changes found, skipping parsing
+2022-03-30 20:37:20.938752 (Thread-12): 20:37:20  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6055fefa-45c9-4900-ac22-b998d1880f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa49c13ebe0>]}
+2022-03-30 20:37:23.913012 (Thread-13): handling status request
+2022-03-30 20:37:23.913395 (Thread-13): 20:37:23  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '6055fefa-45c9-4900-ac22-b998d1880f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa49c1aef10>]}
+2022-03-30 20:37:23.914046 (Thread-13): sending response (<Response 1241 bytes [200 OK]>) to 10.0.3.87
+2022-03-30 20:37:24.059539 (Thread-14): handling ps request
+2022-03-30 20:37:24.059904 (Thread-14): 20:37:24  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '6055fefa-45c9-4900-ac22-b998d1880f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa49c1aee50>]}
+2022-03-30 20:37:24.060360 (Thread-14): sending response (<Response 105 bytes [200 OK]>) to 10.0.3.87
+2022-03-30 20:37:24.193119 (Thread-15): handling status request
+2022-03-30 20:37:24.193482 (Thread-15): 20:37:24  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '6055fefa-45c9-4900-ac22-b998d1880f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa49c24faf0>]}
+2022-03-30 20:37:24.193950 (Thread-15): sending response (<Response 1241 bytes [200 OK]>) to 10.0.3.87
+2022-03-30 20:37:24.309315 (Thread-16): handling status request
+2022-03-30 20:37:24.309670 (Thread-16): 20:37:24  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '6055fefa-45c9-4900-ac22-b998d1880f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa49c24f5b0>]}
+2022-03-30 20:37:24.310118 (Thread-16): sending response (<Response 1241 bytes [200 OK]>) to 10.0.3.87
+2022-03-30 20:37:24.983442 (Thread-17): handling status request
+2022-03-30 20:37:24.983830 (Thread-17): 20:37:24  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '6055fefa-45c9-4900-ac22-b998d1880f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa49c2100d0>]}
+2022-03-30 20:37:24.984279 (Thread-17): sending response (<Response 1241 bytes [200 OK]>) to 10.0.3.87
+2022-03-31 19:15:04.440007 (MainThread): Running with dbt=1.0.4
+2022-03-31 19:15:04.605207 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt_rpc.task.server.RPCServerTask'>, debug=None, defer=None, exclude=None, fail_fast=None, host='0.0.0.0', log_cache_events=False, log_format=None, models=None, partial_parse=True, port=8580, printer_width=None, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='rpc', write_json=None)
+2022-03-31 19:15:04.608419 (MainThread): Tracking: tracking
+2022-03-31 19:15:04.631463 (MainThread): 19:15:04  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b1011520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5494952b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5494985b80>]}
+2022-03-31 19:15:04.631883 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=21
+2022-03-31 19:15:04.632148 (MainThread): Supported methods: ['build', 'cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'list', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'source-freshness', 'status', 'test']
+2022-03-31 19:15:04.632285 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2022-03-31 19:15:04.641402 (Thread-12): 19:15:04  Unable to do partial parsing because profile has changed
+2022-03-31 19:15:04.641713 (Thread-12): 19:15:04  Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5494985e80>]}
+2022-03-31 19:15:04.680298 (Thread-12): 19:15:04  Parsing macros/adapters.sql
+2022-03-31 19:15:04.705844 (Thread-12): 19:15:04  Parsing macros/etc.sql
+2022-03-31 19:15:04.707855 (Thread-12): 19:15:04  Parsing macros/catalog.sql
+2022-03-31 19:15:04.713671 (Thread-12): 19:15:04  Parsing macros/materializations/table.sql
+2022-03-31 19:15:04.717615 (Thread-12): 19:15:04  Parsing macros/materializations/seed.sql
+2022-03-31 19:15:04.720131 (Thread-12): 19:15:04  Parsing macros/materializations/incremental.sql
+2022-03-31 19:15:04.735037 (Thread-12): 19:15:04  Parsing macros/materializations/copy.sql
+2022-03-31 19:15:04.737678 (Thread-12): 19:15:04  Parsing macros/materializations/snapshot.sql
+2022-03-31 19:15:04.739430 (Thread-12): 19:15:04  Parsing macros/materializations/view.sql
+2022-03-31 19:15:04.742002 (Thread-12): 19:15:04  Parsing macros/adapters/metadata.sql
+2022-03-31 19:15:04.749081 (Thread-12): 19:15:04  Parsing macros/adapters/columns.sql
+2022-03-31 19:15:04.758769 (Thread-12): 19:15:04  Parsing macros/adapters/freshness.sql
+2022-03-31 19:15:04.761650 (Thread-12): 19:15:04  Parsing macros/adapters/persist_docs.sql
+2022-03-31 19:15:04.765968 (Thread-12): 19:15:04  Parsing macros/adapters/relation.sql
+2022-03-31 19:15:04.775411 (Thread-12): 19:15:04  Parsing macros/adapters/schema.sql
+2022-03-31 19:15:04.777587 (Thread-12): 19:15:04  Parsing macros/adapters/indexes.sql
+2022-03-31 19:15:04.780270 (Thread-12): 19:15:04  Parsing macros/get_custom_name/get_custom_schema.sql
+2022-03-31 19:15:04.782680 (Thread-12): 19:15:04  Parsing macros/get_custom_name/get_custom_alias.sql
+2022-03-31 19:15:04.784167 (Thread-12): 19:15:04  Parsing macros/get_custom_name/get_custom_database.sql
+2022-03-31 19:15:04.785842 (Thread-12): 19:15:04  Parsing macros/etc/datetime.sql
+2022-03-31 19:15:04.794200 (Thread-12): 19:15:04  Parsing macros/etc/statement.sql
+2022-03-31 19:15:04.798626 (Thread-12): 19:15:04  Parsing macros/generic_test_sql/unique.sql
+2022-03-31 19:15:04.799374 (Thread-12): 19:15:04  Parsing macros/generic_test_sql/not_null.sql
+2022-03-31 19:15:04.799943 (Thread-12): 19:15:04  Parsing macros/generic_test_sql/accepted_values.sql
+2022-03-31 19:15:04.801284 (Thread-12): 19:15:04  Parsing macros/generic_test_sql/relationships.sql
+2022-03-31 19:15:04.802158 (Thread-12): 19:15:04  Parsing macros/materializations/configs.sql
+2022-03-31 19:15:04.804472 (Thread-12): 19:15:04  Parsing macros/materializations/hooks.sql
+2022-03-31 19:15:04.808275 (Thread-12): 19:15:04  Parsing macros/materializations/models/table/table.sql
+2022-03-31 19:15:04.815664 (Thread-12): 19:15:04  Parsing macros/materializations/models/table/create_table_as.sql
+2022-03-31 19:15:04.818480 (Thread-12): 19:15:04  Parsing macros/materializations/models/view/create_or_replace_view.sql
+2022-03-31 19:15:04.821105 (Thread-12): 19:15:04  Parsing macros/materializations/models/view/helpers.sql
+2022-03-31 19:15:04.822406 (Thread-12): 19:15:04  Parsing macros/materializations/models/view/create_view_as.sql
+2022-03-31 19:15:04.824730 (Thread-12): 19:15:04  Parsing macros/materializations/models/view/view.sql
+2022-03-31 19:15:04.831776 (Thread-12): 19:15:04  Parsing macros/materializations/models/incremental/incremental.sql
+2022-03-31 19:15:04.842390 (Thread-12): 19:15:04  Parsing macros/materializations/models/incremental/on_schema_change.sql
+2022-03-31 19:15:04.857947 (Thread-12): 19:15:04  Parsing macros/materializations/models/incremental/is_incremental.sql
+2022-03-31 19:15:04.859548 (Thread-12): 19:15:04  Parsing macros/materializations/models/incremental/merge.sql
+2022-03-31 19:15:04.870723 (Thread-12): 19:15:04  Parsing macros/materializations/models/incremental/column_helpers.sql
+2022-03-31 19:15:04.875159 (Thread-12): 19:15:04  Parsing macros/materializations/seeds/helpers.sql
+2022-03-31 19:15:04.891422 (Thread-12): 19:15:04  Parsing macros/materializations/seeds/seed.sql
+2022-03-31 19:15:04.897406 (Thread-12): 19:15:04  Parsing macros/materializations/tests/helpers.sql
+2022-03-31 19:15:04.899276 (Thread-12): 19:15:04  Parsing macros/materializations/tests/test.sql
+2022-03-31 19:15:04.903660 (Thread-12): 19:15:04  Parsing macros/materializations/tests/where_subquery.sql
+2022-03-31 19:15:04.905475 (Thread-12): 19:15:04  Parsing macros/materializations/snapshots/helpers.sql
+2022-03-31 19:15:04.916671 (Thread-12): 19:15:04  Parsing macros/materializations/snapshots/strategies.sql
+2022-03-31 19:15:04.933078 (Thread-12): 19:15:04  Parsing macros/materializations/snapshots/snapshot_merge.sql
+2022-03-31 19:15:04.934730 (Thread-12): 19:15:04  Parsing macros/materializations/snapshots/snapshot.sql
+2022-03-31 19:15:04.946379 (Thread-12): 19:15:04  Parsing tests/generic/builtin.sql
+2022-03-31 19:15:05.146261 (Thread-12): 19:15:05  1699: static parser successfully parsed example/my_second_dbt_model.sql
+2022-03-31 19:15:05.158991 (Thread-12): 19:15:05  1699: static parser successfully parsed example/my_first_dbt_model.sql
+2022-03-31 19:15:05.261385 (Thread-12): 19:15:05  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5494047af0>]}
+2022-03-31 19:15:05.604599 (Thread-13): handling ps request
+2022-03-31 19:15:05.604982 (Thread-13): 19:15:05  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54940407f0>]}
+2022-03-31 19:15:05.605589 (Thread-13): sending response (<Response 105 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:15:05.636714 (Thread-14): handling status request
+2022-03-31 19:15:05.637112 (Thread-14): 19:15:05  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5494040280>]}
+2022-03-31 19:15:05.638016 (Thread-14): sending response (<Response 15828 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:15:05.761710 (Thread-15): handling status request
+2022-03-31 19:15:05.762092 (Thread-15): 19:15:05  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5494040ee0>]}
+2022-03-31 19:15:05.763033 (Thread-15): sending response (<Response 15828 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:15:05.802130 (Thread-16): handling status request
+2022-03-31 19:15:05.802556 (Thread-16): 19:15:05  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54940407c0>]}
+2022-03-31 19:15:05.803471 (Thread-16): sending response (<Response 15828 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:15:07.605758 (Thread-17): handling status request
+2022-03-31 19:15:07.606149 (Thread-17): 19:15:07  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54940404f0>]}
+2022-03-31 19:15:07.607054 (Thread-17): sending response (<Response 15828 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:15:13.586211 (Thread-18): handling status request
+2022-03-31 19:15:13.586593 (Thread-18): 19:15:13  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5494040190>]}
+2022-03-31 19:15:13.587486 (Thread-18): sending response (<Response 15806 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:15:13.594535 (Thread-19): handling list request
+2022-03-31 19:15:13.594832 (Thread-19): 19:15:13  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f549403b1f0>]}
+2022-03-31 19:15:13.625197 (Thread-19): 19:15:13  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f549403b6a0>]}
+2022-03-31 19:15:13.625614 (Thread-19): 19:15:13  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-31 19:15:13.626143 (Thread-19): 19:15:13  The selection criterion '+.gitignore+' does not match any nodes
+2022-03-31 19:15:13.626277 (Thread-19): 19:15:13  No nodes selected!
+2022-03-31 19:15:13.627983 (Thread-19): sending response (<Response 1923 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:15:19.506265 (Thread-20): handling status request
+2022-03-31 19:15:19.506647 (Thread-20): 19:15:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f549403b940>]}
+2022-03-31 19:15:19.507580 (Thread-20): sending response (<Response 15806 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:15:19.540536 (Thread-21): handling list request
+2022-03-31 19:15:19.540899 (Thread-21): 19:15:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54940a1df0>]}
+2022-03-31 19:15:19.570618 (Thread-21): 19:15:19  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f549403b9d0>]}
+2022-03-31 19:15:19.571031 (Thread-21): 19:15:19  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-31 19:15:19.571411 (Thread-21): 19:15:19  The selection criterion '+.gitignore+' does not match any nodes
+2022-03-31 19:15:19.571548 (Thread-21): 19:15:19  No nodes selected!
+2022-03-31 19:15:19.573137 (Thread-21): sending response (<Response 1923 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:16:06.016315 (Thread-22): handling status request
+2022-03-31 19:16:06.018118 (Thread-22): 19:16:06  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54940a17f0>]}
+2022-03-31 19:16:06.019108 (Thread-22): sending response (<Response 15806 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:16:06.053614 (Thread-23): handling list request
+2022-03-31 19:16:06.053993 (Thread-23): 19:16:06  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5494099910>]}
+2022-03-31 19:16:06.086031 (Thread-23): 19:16:06  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54940991f0>]}
+2022-03-31 19:16:06.086435 (Thread-23): 19:16:06  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-31 19:16:06.086834 (Thread-23): 19:16:06  The selection criterion '+.gitignore+' does not match any nodes
+2022-03-31 19:16:06.087018 (Thread-23): 19:16:06  No nodes selected!
+2022-03-31 19:16:06.088743 (Thread-23): sending response (<Response 1923 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:17:02.134645 (Thread-24): handling status request
+2022-03-31 19:17:02.136405 (Thread-24): 19:17:02  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54940900a0>]}
+2022-03-31 19:17:02.137301 (Thread-24): sending response (<Response 15806 bytes [200 OK]>) to 10.0.44.250
+2022-03-31 19:17:02.145471 (Thread-25): handling list request
+2022-03-31 19:17:02.145795 (Thread-25): 19:17:02  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5494099430>]}
+2022-03-31 19:17:02.181712 (Thread-25): 19:17:02  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b3f52e6-315e-419e-9f80-9c3614666739', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54940a46a0>]}
+2022-03-31 19:17:02.182098 (Thread-25): 19:17:02  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-31 19:17:02.182476 (Thread-25): 19:17:02  The selection criterion '+.gitignore+' does not match any nodes
+2022-03-31 19:17:02.182614 (Thread-25): 19:17:02  No nodes selected!
+2022-03-31 19:17:02.184201 (Thread-25): sending response (<Response 1923 bytes [200 OK]>) to 10.0.44.250
+2022-04-04 15:05:17.948568 (MainThread): Running with dbt=1.0.4
+2022-04-04 15:05:18.104034 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt_rpc.task.server.RPCServerTask'>, debug=None, defer=None, exclude=None, fail_fast=None, host='0.0.0.0', log_cache_events=False, log_format=None, models=None, partial_parse=True, port=8580, printer_width=None, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='rpc', write_json=None)
+2022-04-04 15:05:18.114006 (MainThread): Tracking: tracking
+2022-04-04 15:05:18.133037 (MainThread): 15:05:18  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f907ce0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f5bfc42b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f7c05dd90>]}
+2022-04-04 15:05:18.133504 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=21
+2022-04-04 15:05:18.133886 (MainThread): Supported methods: ['build', 'cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'list', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'source-freshness', 'status', 'test']
+2022-04-04 15:05:18.134133 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2022-04-04 15:05:18.180183 (Thread-12): 15:05:18  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-04-04 15:05:18.180412 (Thread-12): 15:05:18  Partial parsing enabled, no changes found, skipping parsing
+2022-04-04 15:05:18.187547 (Thread-12): 15:05:18  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f5af20af0>]}
+2022-04-04 15:05:18.537728 (Thread-13): handling status request
+2022-04-04 15:05:18.538186 (Thread-13): 15:05:18  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f5afbd5b0>]}
+2022-04-04 15:05:18.538782 (Thread-13): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-04-04 15:05:18.654767 (Thread-14): handling status request
+2022-04-04 15:05:18.655111 (Thread-14): 15:05:18  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f5afbd490>]}
+2022-04-04 15:05:18.655577 (Thread-14): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-04-04 15:05:18.691111 (Thread-15): handling status request
+2022-04-04 15:05:18.691388 (Thread-15): 15:05:18  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f5afbd220>]}
+2022-04-04 15:05:18.691792 (Thread-15): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-04-04 15:05:18.745902 (Thread-16): handling ps request
+2022-04-04 15:05:18.746213 (Thread-16): 15:05:18  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f5afbd130>]}
+2022-04-04 15:05:18.746618 (Thread-16): sending response (<Response 105 bytes [200 OK]>) to 10.0.12.141
+2022-04-04 15:05:19.302634 (Thread-17): handling status request
+2022-04-04 15:05:19.303045 (Thread-17): 15:05:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f5af11c70>]}
+2022-04-04 15:05:19.303517 (Thread-17): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-04-04 15:05:58.728613 (Thread-18): handling ps request
+2022-04-04 15:05:58.728994 (Thread-18): 15:05:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f5bfc4f40>]}
+2022-04-04 15:05:58.729437 (Thread-18): sending response (<Response 105 bytes [200 OK]>) to 10.0.12.141
+2022-04-04 15:05:58.741123 (Thread-19): handling status request
+2022-04-04 15:05:58.741487 (Thread-19): 15:05:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f7c062040>]}
+2022-04-04 15:05:58.742074 (Thread-19): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-04-04 15:05:58.805031 (Thread-20): handling status request
+2022-04-04 15:05:58.805416 (Thread-20): 15:05:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f7c062370>]}
+2022-04-04 15:05:58.805901 (Thread-20): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-04-04 15:05:58.864121 (Thread-21): handling status request
+2022-04-04 15:05:58.864481 (Thread-21): 15:05:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f7c0621c0>]}
+2022-04-04 15:05:58.864924 (Thread-21): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-04-04 15:05:59.915393 (Thread-22): handling status request
+2022-04-04 15:05:59.915759 (Thread-22): 15:05:59  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f7c05d9a0>]}
+2022-04-04 15:05:59.916210 (Thread-22): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-04-04 15:06:36.052159 (Thread-23): handling status request
+2022-04-04 15:06:36.053808 (Thread-23): 15:06:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '91f1333d-c7de-4a10-b840-7dd65ce9045d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5f7c05daf0>]}
+2022-04-04 15:06:36.054309 (Thread-23): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
